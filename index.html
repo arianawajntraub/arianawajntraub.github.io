@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="es-UY">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ariana Wajntraub | Destrabo nudos y los bajo a acción</title>
+  <meta name="description" content="Ariana Wajntraub. Destrabo nudos complejos y los bajo a acción. Bajo perfil | criterio | ejecución. Punta del Este." />
+  <meta property="og:title" content="Ariana Wajntraub" />
+  <meta property="og:description" content="Destrabo nudos complejos y los bajo a acción. Bajo perfil | criterio | ejecución." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#F7F3E9" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#F7F3E9;
+      --text:#333333;
+      --accent:#d96c47;
+      --muted: rgba(51,51,51,.72);
+      --card: rgba(255,255,255,.55);
+      --border: rgba(51,51,51,.14);
+      --shadow: 0 10px 30px rgba(0,0,0,.06);
+      --radius: 18px;
+      --max: 980px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Lato, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.45;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px 18px 60px}
+    header{
+      position:sticky; top:0; z-index:20;
+      background: color-mix(in srgb, var(--bg) 92%, white 8%);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav{
+      max-width:var(--max); margin:0 auto;
+      padding:14px 18px;
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+    }
+    .brand{
+      display:flex; flex-direction:column; gap:2px;
+      font-family: Manrope, system-ui, sans-serif;
+      letter-spacing:.2px;
+    }
+    .brand strong{font-weight:700; font-size:15px}
+    .brand span{font-size:12px; color:var(--muted)}
+    .navlinks{display:flex; gap:14px; align-items:center; flex-wrap:wrap}
+    .navlinks a{font-size:13px; color:var(--muted)}
+    .navlinks a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius: 999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.35);
+      font-size:13px;
+      gap:8px;
+      transition: transform .06s ease, background .2s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{background: rgba(255,255,255,.65)}
+    .btn:active{transform: translateY(1px)}
+    .btn.primary{
+      background: var(--accent);
+      border-color: color-mix(in srgb, var(--accent) 70%, black 30%);
+      color: white;
+    }
+    .btn.primary:hover{background: color-mix(in srgb, var(--accent) 88%, black 12%)}
+
+    .hero{padding:44px 0 18px}
+    h1{
+      font-family: Manrope, system-ui, sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height:1.05;
+      margin:0 0 10px;
+      letter-spacing:-.6px;
+    }
+    .sub{
+      color: var(--muted);
+      font-size: 16px;
+      margin: 0 0 16px;
+      max-width: 74ch;
+    }
+    .meta{
+      display:flex; gap:10px; flex-wrap:wrap;
+      color: var(--muted);
+      font-size: 12.5px;
+      margin-bottom: 16px;
+    }
+    .meta .pill{
+      border:1px solid var(--border);
+      padding:6px 10px;
+      border-radius:999px;
+      background: rgba(255,255,255,.35);
+    }
+    .actions{display:flex; gap:10px; flex-wrap:wrap}
+
+    section{padding:24px 0}
+    .section-title{
+      font-family: Manrope, system-ui, sans-serif;
+      font-weight:700;
+      font-size: 16px;
+      margin: 0 0 12px;
+      letter-spacing:.1px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 12px;
+    }
+    .card{
+      grid-column: span 12;
+      border:1px solid var(--border);
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+    }
+    @media (min-width:760px){
+      .card.third{grid-column: span 4;}
+      .card.half{grid-column: span 6;}
+    }
+    .card h3{
+      font-family: Manrope, system-ui, sans-serif;
+      font-size: 16px;
+      margin: 0 0 8px;
+    }
+    .card p{margin:0 0 12px; color: var(--muted)}
+    .mini{
+      display:flex; gap:8px; flex-wrap:wrap; margin: 10px 0 14px;
+      font-size: 12.5px; color: var(--muted);
+    }
+    .mini span{border:1px solid var(--border); padding:6px 10px; border-radius:999px; background: rgba(255,255,255,.35)}
+    ul.clean{margin:10px 0 0; padding-left:18px; color: var(--muted)}
+    ul.clean li{margin:6px 0}
+
+    .faq details{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.35);
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin: 10px 0;
+    }
+    .faq summary{
+      cursor:pointer;
+      font-family: Manrope, system-ui, sans-serif;
+      font-weight: 600;
+      list-style:none;
+    }
+    .faq summary::-webkit-details-marker{display:none}
+    .faq p{margin:10px 0 0; color: var(--muted)}
+
+    .divider{height:1px; background: var(--border); margin: 18px 0}
+
+    /* Footer (estilo AWante/SPO: marca + tagline minúscula + copyright) */
+    footer{
+      margin-top: 28px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+    }
+    .footer-top{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:14px; flex-wrap:wrap;
+    }
+    .footer-mark{
+      font-family: Manrope, system-ui, sans-serif;
+      font-weight:700;
+      letter-spacing:.2px;
+      color: var(--text);
+    }
+    .footer-tagline{
+      font-size: 12.5px;
+      text-transform: lowercase;
+    }
+    .footlinks{
+      display:flex; gap:12px; flex-wrap:wrap;
+      font-size: 12.5px;
+    }
+    .footlinks a{
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .copyright{
+      margin-top: 10px;
+      font-size: 12px;
+      text-transform: lowercase;
+    }
+
+    /* anchor offset for sticky header */
+    .anchor{scroll-margin-top: 78px}
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="nav">
+    <div class="brand">
+      <strong>Ariana Wajntraub</strong>
+      <span>Bajo perfil | criterio | ejecución · Punta del Este</span>
+    </div>
+    <nav class="navlinks" aria-label="Navegación">
+      <a href="#empezar">por dónde empezar</a>
+      <a href="#como">cómo trabajo</a>
+      <a href="#faq">faq</a>
+      <a class="btn primary" id="ctaTop" href="#">coordinar 15 min</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Destrabo nudos complejos y los bajo a acción.</h1>
+    <p class="sub">
+      Trabajo con equipos, fundadores y profesionales independientes. Ordeno el problema real,
+      lo traduzco en decisiones y próximos pasos, y lo dejo listo para ejecutar — sin humo.
+    </p>
+    <div class="meta" aria-label="Señales">
+      <div class="pill">confidencialidad</div>
+      <div class="pill">claridad + ejecución</div>
+      <div class="pill">punta del este</div>
+    </div>
+    <div class="actions">
+      <a class="btn primary" id="ctaHero" href="#">coordinar 15 min (whatsapp)</a>
+      <a class="btn" id="ctaMail" href="#">mail</a>
+      <a class="btn" href="#empezar">elegí por dónde empezar</a>
+    </div>
+  </section>
+
+  <section id="empezar" class="anchor">
+    <h2 class="section-title">Elegí por dónde empezar</h2>
+
+    <div class="cards">
+      <div class="card third">
+        <h3>AWante | Consultoría estratégica</h3>
+        <p>Cuando hay nudo, presión, demasiadas opciones o falta de tracción.</p>
+        <div class="mini">
+          <span>sesión de destrabe</span><span>sprint 2–4 semanas</span><span>entregables claros</span>
+        </div>
+        <a class="btn primary" href="https://awante.wajntraub.ar/" target="_blank" rel="noopener">ir a awante</a>
+      </div>
+
+      <div class="card third">
+        <h3>SPO | SerProfesionalOnline</h3>
+        <p>Entrada liviana: oferta clara, mensaje prolijo, presencia digital sin vueltas.</p>
+        <div class="mini">
+          <span>claridad</span><span>oferta</span><span>vidriera simple</span>
+        </div>
+        <a class="btn primary" href="https://serprofesionalonline.github.io/" target="_blank" rel="noopener">ir a spo</a>
+      </div>
+
+      <div class="card third">
+        <h3>La Minuta W | Newsletter</h3>
+        <p>Lecturas aplicables: estrategia, comunicación y arte — para pensar mejor.</p>
+        <div class="mini">
+          <span>5 min</span><span>curaduría</span><span>aplicable</span>
+        </div>
+        <a class="btn primary" href="https://arianawajntraub.substack.com/" target="_blank" rel="noopener">leer / suscribirme</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="como" class="anchor">
+    <h2 class="section-title">Cómo trabajo</h2>
+    <div class="cards">
+      <div class="card">
+        <ul class="clean">
+          <li>diagnóstico rápido: qué está trabado y por qué.</li>
+          <li>elegimos un objetivo concreto (no “mejorar todo”).</li>
+          <li>decisiones y próximos pasos: dueño | fecha | criterio.</li>
+          <li>entregables simples: documento, guión, plan, tablero o estructura.</li>
+          <li>seguimiento breve y honesto: lo que suma | lo que sobra.</li>
+          <li>bajo perfil, siempre.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="anchor">
+    <h2 class="section-title">FAQ</h2>
+    <div class="faq">
+      <details>
+        <summary>¿qué hacés exactamente?</summary>
+        <p>destrabo nudos complejos y los bajo a decisiones y próximos pasos claros.</p>
+      </details>
+      <details>
+        <summary>¿con quién trabajás?</summary>
+        <p>equipos, fundadores y profesionales independientes que necesitan foco y ejecución.</p>
+      </details>
+      <details>
+        <summary>¿cómo arrancamos?</summary>
+        <p>coordinamos 15 minutos por whatsapp. si tiene sentido, definimos el primer paso.</p>
+      </details>
+      <details>
+        <summary>¿trabajás con confidencialidad?</summary>
+        <p>sí. bajo perfil y cuidado de información.</p>
+      </details>
+      <details>
+        <summary>¿sos consultora o ejecutás?</summary>
+        <p>las dos: ordeno, decido con vos y lo dejo listo para ejecutar.</p>
+      </details>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <footer>
+    <div class="footer-top">
+      <div>
+        <div class="footer-mark">ariana wajntraub</div>
+        <div class="footer-tagline">bajo perfil. criterio. ejecución.</div>
+      </div>
+      <div class="footlinks">
+        <a id="footWhatsApp" href="#">whatsapp</a>
+        <a id="footMail" href="#">mail</a>
+        <a id="footLinkedIn" href="#" target="_blank" rel="noopener">linkedin</a>
+      </div>
+    </div>
+    <div class="copyright">© <span id="year"></span> ariana wajntraub. todos los derechos reservados.</div>
+  </footer>
+</main>
+
+<script>
+  // ====== CONFIG (EDITÁ SOLO ESTO) ======
+  const CONFIG = {
+    WHATSAPP_NUMBER: "59800000000", // sin + (ej: 5989xxxxxxx)
+    WHATSAPP_MESSAGE: "Hola Ariana, soy ___. Estoy con ___ (nudo). ¿Tenés 15 minutos esta semana?",
+    EMAIL: "hola@wajntraub.ar",
+    LINKEDIN_URL: "https://www.linkedin.com/in/arianawajntraub/"
+  };
+
+  const waUrl = () => {
+    const msg = encodeURIComponent(CONFIG.WHATSAPP_MESSAGE);
+    return `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${msg}`;
+  };
+
+  document.getElementById("ctaTop").href = waUrl();
+  document.getElementById("ctaHero").href = waUrl();
+  document.getElementById("footWhatsApp").href = waUrl();
+
+  document.getElementById("ctaMail").href = `mailto:${CONFIG.EMAIL}`;
+  document.getElementById("footMail").href = `mailto:${CONFIG.EMAIL}`;
+
+  document.getElementById("footLinkedIn").href = CONFIG.LINKEDIN_URL;
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
