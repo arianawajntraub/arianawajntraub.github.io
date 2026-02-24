@@ -119,6 +119,14 @@
       display:grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 12px;
+    .cards{
+  display:grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 12px;
+
+  grid-auto-rows: 1fr;
+  align-items: stretch;
+}
     }
     .card{
       grid-column: span 12;
@@ -129,6 +137,11 @@
       box-shadow: var(--shadow);
 display: flex;
 flex-direction: column;
+  .card{
+  /* lo que ya tenés... */
+
+  height: 100%;
+}
     }
     @media (min-width:760px){
       .card.third{grid-column: span 4;}
