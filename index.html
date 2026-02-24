@@ -127,6 +127,8 @@
       border-radius: var(--radius);
       padding: 16px;
       box-shadow: var(--shadow);
+display: flex;
+flex-direction: column;
     }
     @media (min-width:760px){
       .card.third{grid-column: span 4;}
@@ -141,6 +143,11 @@
     .mini{
       display:flex; gap:8px; flex-wrap:wrap; margin: 10px 0 14px;
       font-size: 12.5px; color: var(--muted);
+      /* Alinear botones al fondo de cada card */
+.card .btn.primary{
+  margin-top: auto;
+  align-self: flex-start; /* mantiene el botón alineado a la izquierda */
+}
     }
     .mini span{border:1px solid var(--border); padding:6px 10px; border-radius:999px; background: rgba(255,255,255,.35)}
     ul.clean{margin:10px 0 0; padding-left:18px; color: var(--muted)}
