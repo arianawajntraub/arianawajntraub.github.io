@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="es-UY">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ariana Wajntraub | Consultoría estratégica, claridad y ejecución</title>
+  <meta name="description" content="Consultoría estratégica para empresas, proyectos y profesionales. Destrabo nudos complejos y los bajo a acción. Claridad | criterio | ejecución. Punta del Este y Buenos Aires." />
+  <meta property="og:title" content="Ariana Wajntraub" />
+  <meta property="og:description" content="Destrabo nudos complejos y los bajo a acción. Claridad | criterio | ejecución." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#ffffff" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#F7F3E9;
+      --text:#333333;
+      --accent:#d96c47;
+      --muted: rgba(51,51,51,.72);
+      --card: rgba(255,255,255,.55);
+      --border: rgba(51,51,51,.14);
+      --shadow: 0 10px 30px rgba(0,0,0,.06);
+      --radius: 18px;
+      --max: 980px;
+      --foot-bg:#333333;
+      --foot-pill:#444444;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Lato, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      line-height:1.45;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:var(--max); margin:0 auto; padding:24px 18px 60px}
+    header{
+      position:sticky; top:0; z-index:20;
+      background: color-mix(in srgb, var(--bg) 92%, white 8%);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav{
+      max-width:var(--max); margin:0 auto;
+      padding:14px 18px;
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+    }
+    .brand{
+      display:flex; flex-direction:column; gap:2px;
+      font-family: Manrope, system-ui, sans-serif;
+      letter-spacing:.2px;
+    }
+    .brand strong{font-weight:700; font-size:15px}
+    .brand span{font-size:12px; color:var(--muted)}
+    .navlinks{display:flex; gap:14px; align-items:center; flex-wrap:wrap}
+    .navlinks a{font-size:13px; color:var(--muted)}
+    .navlinks a:hover{color:var(--text)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:10px 14px;
+      border-radius: 999px;
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.35);
+      font-size:13px;
+      gap:8px;
+      transition: transform .06s ease, background .2s ease;
+      white-space:nowrap;
+    }
+    .btn:hover{background: rgba(255,255,255,.65)}
+    .btn:active{transform: translateY(1px)}
+    .btn.primary{
+      background: var(--accent);
+      border-color: color-mix(in srgb, var(--accent) 70%, black 30%);
+      color: white;
+    }
+    .btn.primary:hover{background: color-mix(in srgb, var(--accent) 88%, black 12%)}
+
+    .hero{padding:44px 0 18px}
+    h1{
+      font-family: Manrope, system-ui, sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height:1.05;
+      margin:0 0 10px;
+      letter-spacing:-.6px;
+      max-width: 12ch;
+    }
+    .sub{
+      color: var(--muted);
+      font-size: 16px;
+      margin: 0 0 16px;
+      max-width: 74ch;
+    }
+    .actions{display:flex; gap:10px; flex-wrap:wrap}
+
+    section{padding:24px 0}
+    .section-title{
+      font-family: Manrope, system-ui, sans-serif;
+      font-weight:700;
+      font-size: 16px;
+      margin: 0 0 12px;
+      letter-spacing:.1px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 12px;
+    }
+    .card{
+      grid-column: span 12;
+      border:1px solid var(--border);
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 16px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      min-height: 240px;
+    }
+    @media (min-width:760px){
+      .card.third{grid-column: span 4;}
+      .card.half{grid-column: span 6;}
+    }
+    .card h3{
+      font-family: Manrope, system-ui, sans-serif;
+      font-size: 16px;
+      margin: 0 0 8px;
+    }
+    .card p{margin:0 0 12px; color: var(--muted)}
+
+    .mini{
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+      margin: 10px 0 14px;
+      font-size: 12.5px;
+      color: var(--muted);
+    }
+    .mini span{
+      border:1px solid var(--border);
+      padding:6px 10px;
+      border-radius:999px;
+      background: rgba(255,255,255,.35);
+    }
+
+    .card .btn.primary{
+      margin-top: auto;
+      align-self: flex-start;
+    }
+
+    ul.clean{margin:10px 0 0; padding-left:18px; color: var(--muted)}
+    ul.clean li{margin:6px 0}
+
+    .faq details{
+      border:1px solid var(--border);
+      background: rgba(255,255,255,.35);
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin: 10px 0;
+    }
+    .faq summary{
+      cursor:pointer;
+      font-family: Manrope, system-ui, sans-serif;
+      font-weight: 600;
+      list-style:none;
+    }
+    .faq summary::-webkit-details-marker{display:none}
+    .faq p{margin:10px 0 0; color: var(--muted)}
+
+    footer{
+      background:var(--foot-bg);
+      color:#fff;
+      margin-top: 28px;
+    }
+    .foot-wrap{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:28px 18px;
+      display:grid;
+      gap:14px;
+      justify-items:center;
+      text-align:center;
+    }
+    .foot-logos{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .foot-logo-link{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      font-family: Manrope, system-ui, sans-serif;
+      font-weight:700;
+      font-size: 18px;
+      letter-spacing:.01em;
+    }
+    .foot-socials{display:flex;gap:12px;flex-wrap:wrap}
+    .foot-socials a{
+      width:42px;height:42px;border-radius:999px;background:var(--foot-pill);
+      color:#fff;display:inline-flex;align-items:center;justify-content:center;
+      border:1px solid rgba(255,255,255,.08);
+      font-size:13px;
+      padding:0 14px;
+      min-width:42px;
+    }
+    .copyright{opacity:.8;font-size:.9rem}
+    .anchor{scroll-margin-top: 78px}
+    @media (max-width:640px){
+      .nav{align-items:flex-start; flex-direction:column}
+      .navlinks{width:100%; gap:10px}
+      .navlinks a:not(.btn){display:none}
+      .card{min-height:auto}
+      .actions .btn{width:100%}
+    }
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="nav">
+    <div class="brand">
+      <strong>Ariana Wajntraub | Consultoría estratégica</strong>
+      <span>claridad | criterio | ejecución · punta del este · buenos aires</span>
+    </div>
+    <nav class="navlinks" aria-label="Navegación">
+      <a href="#empezar">por dónde empezar</a>
+      <a href="#como">cómo trabajo</a>
+      <a href="#faq">faq</a>
+      <a class="btn primary" id="ctaTop" href="#">coordinar 15 min</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Destrabo nudos complejos y los bajo a acción.</h1>
+    <p class="sub">
+      Trabajo con empresas, proyectos y profesionales independientes. Ordeno el problema real,
+      lo traduzco en decisiones y próximos pasos y lo dejo listo para ejecutar — sin humo.
+    </p>
+    <div class="actions">
+      <a class="btn primary" id="ctaHero" href="#">coordinar 15 min (whatsapp)</a>
+      <a class="btn" href="#empezar">elegir por dónde empezar</a>
+    </div>
+  </section>
+
+  <section id="empezar" class="anchor">
+    <h2 class="section-title">Elegir por dónde empezar</h2>
+
+    <div class="cards">
+      <div class="card third">
+        <h3>AWante | Consultoría estratégica</h3>
+        <p>Cuando hay nudo, presión, demasiadas opciones o falta de tracción en una empresa o proyecto.</p>
+        <div class="mini">
+          <span>sesión de destrabe</span><span>sprint 2–4 semanas</span><span>entregables claros</span>
+        </div>
+        <a class="btn primary" href="https://awante.wajntraub.ar/" target="_blank" rel="noopener">ir a AWante</a>
+      </div>
+
+      <div class="card third">
+        <h3>SPO | SerProfesionalOnline</h3>
+        <p>Entrada liviana para profesionales: oferta clara, mensaje prolijo y presencia digital que acompaña tu nivel.</p>
+        <div class="mini">
+          <span>claridad</span><span>oferta</span><span>vidriera simple</span>
+        </div>
+        <a class="btn primary" href="https://serprofesionalonline.wajntraub.ar/" target="_blank" rel="noopener">ir a SPO</a>
+      </div>
+
+      <div class="card third">
+        <h3>Cluster Punta del Este</h3>
+        <p>Propuestas abiertas hasta el 15 de junio para profesionales y empresas que quieran ordenar una vidriera, preparar una exposición clave o revisar bases de comunicación con criterio.</p>
+        <div class="mini">
+          <span>hasta el 15 de junio</span><span>profesionales</span><span>empresas</span>
+        </div>
+        <a class="btn primary" href="/cluster">ir a Cluster</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="como" class="anchor">
+    <h2 class="section-title">Cómo trabajo</h2>
+    <div class="cards">
+      <div class="card">
+        <ul class="clean">
+          <li>diagnóstico rápido: qué está trabado y por qué.</li>
+          <li>elegimos un objetivo concreto (no “mejorar todo”).</li>
+          <li>decisiones y próximos pasos: dueño | fecha | criterio.</li>
+          <li>entregables simples: documento, guión, plan, tablero o estructura.</li>
+          <li>seguimiento breve y honesto: lo que suma | lo que sobra.</li>
+          <li>claridad estratégica, siempre.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="anchor">
+    <h2 class="section-title">FAQ</h2>
+    <div class="faq">
+      <details>
+        <summary>¿qué hacés exactamente?</summary>
+        <p>destrabo nudos complejos y los bajo a decisiones y próximos pasos claros.</p>
+      </details>
+      <details>
+        <summary>¿con quién trabajás?</summary>
+        <p>empresas, equipos, fundadores y profesionales independientes que necesitan foco y ejecución.</p>
+      </details>
+      <details>
+        <summary>¿cómo arrancamos?</summary>
+        <p>coordinamos 15 minutos por whatsapp. si tiene sentido, definimos el primer paso.</p>
+      </details>
+      <details>
+        <summary>¿trabajás con confidencialidad?</summary>
+        <p>sí. confidencialidad y cuidado de información.</p>
+      </details>
+      <details>
+        <summary>¿sos consultora o ejecutás?</summary>
+        <p>las dos: ordeno, decido con vos y lo dejo listo para ejecutar.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="foot-wrap">
+    <div class="foot-logos">
+      <a class="foot-logo-link" href="https://awante.wajntraub.ar/" target="_blank" rel="noopener" aria-label="Ir a AWante">AWante</a>
+      <a class="foot-logo-link" href="https://serprofesionalonline.wajntraub.ar/" target="_blank" rel="noopener" aria-label="Ir a SPO">SPO</a>
+    </div>
+    <div class="foot-socials" aria-label="Redes y contacto">
+      <a id="footWhatsApp" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">wa</a>
+      <a id="footLinkedIn" href="#" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+    </div>
+    <div class="copyright">© <span id="year"></span> Ariana Wajntraub. Todos los derechos reservados.</div>
+  </div>
+</footer>
+
+<script>
+  const CONFIG = {
+    WHATSAPP_NUMBER: "541154687647",
+    WHATSAPP_MESSAGE: "Hola, soy ____. Estoy con ____ (nudo). ¿Tenés 15 minutos esta semana?",
+    LINKEDIN_URL: "https://www.linkedin.com/in/arianawajntraub/"
+  };
+
+  const waUrl = () => {
+    const msg = encodeURIComponent(CONFIG.WHATSAPP_MESSAGE);
+    return `https://wa.me/${CONFIG.WHATSAPP_NUMBER}?text=${msg}`;
+  };
+
+  document.getElementById("ctaTop").href = waUrl();
+  document.getElementById("ctaHero").href = waUrl();
+  document.getElementById("footWhatsApp").href = waUrl();
+  document.getElementById("footLinkedIn").href = CONFIG.LINKEDIN_URL;
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
