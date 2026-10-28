@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>🧬 El Clon Evolutivo de Ariana — Centro de Debate, Comandos y Sistematización</title>
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --ink: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --accent: #1e293b;
+      --green: #15803d;
+      --green-bg: #dcfce7;
+      --amber: #b45309;
+      --amber-bg: #fef3c7;
+      --red: #b91c1c;
+      --red-bg: #fee2e2;
+      --blue: #1d4ed8;
+      --blue-bg: #dbeafe;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+      padding: 20px 16px 80px;
+    }
+    .container { max-width: 1180px; margin: 0 auto; }
+    header {
+      background: #0f172a;
+      color: #fff;
+      padding: 24px 28px;
+      border-radius: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    header h1 { margin: 0 0 6px; font-size: 22px; letter-spacing: -0.02em; }
+    header p { margin: 0; color: #cbd5e1; font-size: 13.5px; max-width: 720px; }
+    .btn-primary {
+      background: #10b981;
+      color: #052e16;
+      font-weight: 700;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 13.5px;
+    }
+    .hero-phrase {
+      background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+      border: 2px solid #10b981;
+      border-radius: 14px;
+      padding: 18px 22px;
+      margin-bottom: 22px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .hero-phrase .label {
+      font-size: 11.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: #047857;
+      letter-spacing: 0.05em;
+    }
+    .hero-phrase .phrase {
+      font-size: 19px;
+      font-weight: 800;
+      color: #064e3b;
+      margin: 4px 0 2px;
+    }
+    .hero-phrase .sub {
+      font-size: 13px;
+      color: #065f46;
+    }
+    .copy-pill {
+      background: #065f46;
+      color: #fff;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 9px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .section-box {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      margin-bottom: 24px;
+      overflow-x: auto;
+    }
+    .section-box h2 {
+      margin: 0 0 12px;
+      font-size: 18px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+    th, td {
+      text-align: left;
+      padding: 11px 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    th {
+      background: #f1f5f9;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+    .cmd-chip {
+      display: inline-block;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      padding: 4px 9px;
+      border-radius: 6px;
+      font-weight: 700;
+      color: #0f172a;
+      cursor: pointer;
+      font-size: 12.5px;
+      margin-top: 4px;
+    }
+    .filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+    .filter-btn {
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      color: var(--muted);
+    }
+    .filter-btn.active {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 9px;
+      border-radius: 999px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .badge-origin { background: var(--blue-bg); color: var(--blue); }
+    .card h3 { margin: 0; font-size: 16px; }
+    .block {
+      background: #f8fafc;
+      border-left: 3px solid #94a3b8;
+      padding: 8px 11px;
+      border-radius: 0 8px 8px 0;
+      font-size: 13px;
+    }
+    .block.win { border-left-color: #10b981; background: #f0fdf4; }
+    .block strong { display: block; font-size: 11px; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+    .actions {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+    .status-btn {
+      flex: 1;
+      padding: 7px 8px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .status-btn.active-ok { background: var(--green-bg); color: var(--green); border-color: #86efac; }
+    .status-btn.active-fix { background: var(--red-bg); color: var(--red); border-color: #fca5a5; }
+    .status-btn.active-evo { background: var(--amber-bg); color: var(--amber); border-color: #fcd34d; }
+    textarea {
+      width: 100%;
+      min-height: 70px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 9px;
+      font-family: inherit;
+      font-size: 13px;
+      display: none;
+    }
+    textarea.visible { display: block; }
+    .new-rule-box {
+      background: #fff;
+      border: 2px dashed #94a3b8;
+      border-radius: 14px;
+      padding: 20px;
+      margin-top: 24px;
+    }
+    .new-rule-box h3 { margin-top: 0; font-size: 16px; }
+    .new-rule-box input, .new-rule-box textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      font-size: 13.5px;
+    }
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      left: 20px;
+      max-width: 420px;
+      margin: 0 auto;
+      background: #0f172a;
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-weight: 600;
+      text-align: center;
+      display: none;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;">
+      <a href="HUB_GENERAL_ARIANA.html" style="background:#fff; border:1px solid #cbd5e1; color:#0f172a; padding:10px 16px; border-radius:999px; font-weight:700; font-size:13px; text-decoration:none;">🌳 1. Mi Linktree General (Todas las Cuentas, Sitios y Pendientes)</a>
+      <a href="CLON_ARIANA_PANEL_VIVO.html" style="background:#0f172a; border:1px solid #0f172a; color:#fff; padding:10px 16px; border-radius:999px; font-weight:700; font-size:13px; text-decoration:none;">🧬 2. Mi Clon Evolutivo + Tabla de Comandos</a>
+    </div>
+    <header>
+      <div>
+        <h1>🧬 El Clon Evolutivo de Ariana — Centro de Debate, Comandos y Sistematización</h1>
+        <p>Tu panel único para celular y computadora: arriba tenés la frase clave y la tabla de comandos (tocás cualquiera y se copia); abajo tenés todas tus reglas para debatir, corregir o evolucionar.</p>
+      </div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="https://wa.me/?text=🧬%20Mi%20Panel%20Vivo%20del%20Clon%20Evolutivo%20%2B%20Tabla%20de%20Comandos:%0A👉%20Link%20Directo%20Vivo:%20https://alliance-phrases-camcorders-underlying.trycloudflare.com%0A👉%20Dominio%20Fijo:%20https://wajntraub.ar/clon-ariana/" target="_blank" style="background:#25D366; color:#052e16; font-weight:700; text-decoration:none; padding:12px 16px; border-radius:10px; font-size:13.5px;">📲 Guardarlo en mi WhatsApp</a>
+        <button class="btn-primary" onclick="exportDebate()">📋 Copiar mis Ajustes / Debates</button>
+      </div>
+    </header>
+
+    <!-- FRASE CLAVE DESTACADA -->
+    <div class="hero-phrase">
+      <div>
+        <div class="label">🔑 Frase Clave para que una cuenta nunca se olvide y retroalimente todo</div>
+        <div class="phrase">"Actualizá la memoria de esta cuenta con esto"</div>
+        <div class="sub">Escribila cuando cierres una definición para que impacte en Stakeholders, Miércoles, Jueves, Web y Ads.</div>
+      </div>
+      <button class="copy-pill" onclick="copyText('Actualizá la memoria de esta cuenta con esto')">📋 Copiar Frase</button>
+    </div>
+
+    <!-- TABLA DE COMANDOS INTEGRADA -->
+    <div class="section-box">
+      <h2>🧭 Tabla Rápida: Qué Pedirme o Qué Comando Tocar en Cada Situación</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Qué necesitás lograr</th>
+            <th>Frase o Comando (Tocá para copiar)</th>
+            <th>Qué hace por adentro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>1. Guardar lo decidido hoy en esa cuenta</strong> (retroalimentar Stakeholders ↔ Miércoles/Jueves ↔ Ads)</td>
+            <td><span class="cmd-chip" onclick="copyText('Actualizá la memoria de esta cuenta con esto')">📋 "Actualizá la memoria de esta cuenta con esto"</span></td>
+            <td>Lo graba en el archivo físico <code>SKILL.md</code> de esa carpeta para que ningún chat de esa marca se olvide.</td>
+          </tr>
+          <tr>
+            <td><strong>2. Subir un hallazgo tuyo al Clon General</strong> (para todos los proyectos futuros)</td>
+            <td><span class="cmd-chip" onclick="copyText('Subí este hallazgo a mi Clon (Actualizá el Master)')">📋 "Subí este hallazgo a mi Clon (Actualizá el Master)"</span></td>
+            <td>Guarda el obstáculo, qué te preguntaste, qué descartaste y la solución en <code>MASTER_ECOMMERCE_BRAIN.md</code> + tus 4 Google Drives.</td>
+          </tr>
+          <tr>
+            <td><strong>3. Poner a trabajar a varias áreas en equipo</strong> (Finanzas + Benchmark + Arte + Asistente)</td>
+            <td><span class="cmd-chip" onclick="copyText('/teamwork ')">📋 /teamwork [tu pedido al lado]</span></td>
+            <td>Va al inicio del mensaje 1 sola vez. Manda subagentes soldados afuera y vuelve con la conclusión limpia y el Linktree.</td>
+          </tr>
+          <tr>
+            <td><strong>4. Pedir piezas visuales, web o mascotas</strong> con filtro del Asistente</td>
+            <td><span class="cmd-chip" onclick="copyText('Con Dirección de Arte armame esto, que el Asistente verifique las reglas del proyecto y me dé el link directo de 1 clic')">📋 "Con Dirección de Arte armame..."</span></td>
+            <td>Maqueta 1 muestra antes de hacer 15 en serie, respeta colores/tono del dueño y entrega link directo sin código <code>&lt;/&gt;</code>.</td>
+          </tr>
+          <tr>
+            <td><strong>5. Pensar juntos a través de preguntas</strong> (sin que haga una barrida a ciegas)</td>
+            <td><span class="cmd-chip" onclick="copyText('/grill-me ')">📋 /grill-me</span></td>
+            <td>Te hace preguntas punzantes de a una para destrabar la estrategia antes de construir.</td>
+          </tr>
+          <tr>
+            <td><strong>6. Arrancar un Proyecto Nuevo (#6, #7...)</strong> con todas tus bases ya sabidas</td>
+            <td><span class="cmd-chip" onclick="copyText('Arrancamos Proyecto Nuevo en Modo Ariana: barre primero los 4 anillos geográficos y apliquemos las 10 bases del Clon')">📋 "Arrancamos Proyecto Nuevo..."</span></td>
+            <td>Investiga el mercado local en Google, crea el candado aislado y aplica Finanzas USD, Naming doble capa y Promos.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" onclick="filterCards('ALL', this)">Todas las Reglas del Clon (12)</button>
+      <button class="filter-btn" onclick="filterCards('FINANZAS', this)">💰 Finanzas & Márgenes</button>
+      <button class="filter-btn" onclick="filterCards('COMERCIAL', this)">🏷️ Promos, Naming & Ventas</button>
+      <button class="filter-btn" onclick="filterCards('B2B_ADS', this)">📈 B2B, ICP, Ads & Mailing</button>
+      <button class="filter-btn" onclick="filterCards('ARTE_OPS', this)">🎨 Guerra, Arte & Exposición</button>
+    </div>
+
+    <div class="grid" id="cardsGrid"></div>
+
+    <div class="new-rule-box">
+      <h3>➕ Agregar un Nuevo Hallazgo / Regla para Debatir o Subir al Clon</h3>
+      <input type="text" id="newTitle" placeholder="Título o tema..." />
+      <textarea id="newBody" class="visible" placeholder="Contame con qué te enfrentaste, qué te preguntaste, qué descartaste y cómo lo resolviste..."></textarea>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">✅ Copiado al portapapeles</div>
+
+  <script>
+    const RULES = [
+      {
+        id: "SEO-03",
+        cat: "SEO_GEO",
+        origin: "Nació en: 4 - Star Union",
+        title: "0. Prohibido el 'Hiciste muy bien en preguntarme' → Auditoría Matricial 100% antes de decir 'Listo'",
+        obstacle: "El agente puso JSON-LD y llms.txt solo en 3 páginas de 10, dijo 'ya está listo el sitio', y recién cuando Ariana preguntó '¿está respetado TODO el SEO y TODO el GEO?' corrió la auditoría y confesó que faltaba en 7 páginas (y encima todavía se había olvidado de brochures/, dossier/ y Open Graph en las 12 páginas).",
+        question: "¿Cómo prohibimos que un agente entregue por muestreo parcial esperando a que Ariana actúe de policía para recién ahí revisar el resto?",
+        solution: "Candado #10 + Script Auditor Físico (audit_site_completeness.py): Antes de decir 'está listo' en cualquier sitio multipágina, es obligatorio correr la matriz N páginas x M requisitos (JSON-LD + llms.txt + Canonical + Description + Open Graph para WhatsApp/LinkedIn + noindex en paneles privados) hasta que el 100% de las filas den PASS en el primer intento."
+      },
+      {
+        id: "ART-03",
+        cat: "ARTE_OPS",
+        origin: "Nació en: 5 - Eliezer Shemtov & 1 - Zaguán",
+        title: "1. Frente de Guerra Retroalimentado + Maquetar 1 antes de 15 + Rigor en lo Expuesto (Pitch/Cliente/UI)",
+        obstacle: "1) Separar la cabeza en compartimentos mudos impide que la charla previa alimente a Stakeholders, que los Miércoles/Jueves alimenten la presentación y que Ads tome todo. 2) En las barridas, los agentes hacían 15 PDFs sin validar 1 primero o metían datos de Unidades Indexadas (UI) sin fuente oficial del BCU ni cadencia diaria.",
+        question: "¿Cómo hacemos que todo se retroalimente sin colapsar el chat y dónde ponemos el freno de rigor sin preguntar pavadas?",
+        solution: "1) Un Frente de Guerra donde todo retroalimenta a todo (mandando soldados subagentes para el trabajo pesado). 2) Resolver solo en alto nivel, pero maquetar 1 muestra antes de hacer 15 PDFs. 3) En lo que ve tu cliente, el cliente de tu cliente, un Pitch o datos como las UI (que cambian todos los días en el BCU/INE): prohibido inventar o usar fuentes de oído."
+      },
+      {
+        id: "FIN-01",
+        cat: "FINANZAS",
+        origin: "Nació en: 3 - Entretelado",
+        title: "2. Prohibición de 'Cuenta de Verdulería' → Unit Economics Reales en USD",
+        obstacle: "Calcular 'Precio de Venta - Costo = Ganancia' hace trabajar gratis cuando descontás IVA, pasarela, fallas, estructura fija, pauta (CAC) y sueldo del dueño.",
+        question: "¿Cómo parto del precio real que convalida la calle (Bottom-Up) para fijar mi Costo Tope en USD y saber cuántas unidades reales necesito para vivir del negocio?",
+        solution: "Todo simulador ancla costos en USD y descuenta: IVA (22%), Pasarela (5.5%), Reserva Falla/Cambio (5%), Logística/Packaging y prorrateo de Estructura Fija + Pauta CAC + Sueldo Neto Dueño. Además separa: 🏆 CORE ESCALABLE LOCAL vs. 🧳 CÁPSULA TÁCTICA / VALIJA."
+      },
+      {
+        id: "COM-01",
+        cat: "COMERCIAL",
+        origin: "Nació en: 3 - Entretelado",
+        title: "3. Sistema de Búsqueda de Nombres (Naming de Doble Capa + Candado Proveedor)",
+        obstacle: "Si ponés un nombre poético en el H1 nadie te encuentra en Google/ML; y si ponés el nombre o SKU de la fábrica (Aldeana, Wossen), el cliente o el hotel te puentea.",
+        question: "¿Cómo combino volumen de búsqueda literal con identidad conceptual sin revelar jamás mi cocina de proveedores?",
+        solution: "Capa 1 (H1, URL, ML): Palabra clave literal masiva + medida + material ('Set Pie de Cama XL Tusor 100% Algodón'). Capa 2 (Badge, Subtítulo, Ads): Concepto propietario ('Cero Plancha', 'Entre Huéspedes'). Proveedor encerrado solo en campos privados de Admin."
+      },
+      {
+        id: "COM-02",
+        cat: "COMERCIAL",
+        origin: "Nació en: 3 - Entretelado",
+        title: "4. Sistema Integral de Promociones, Precios Tachados y Regla de 21 Días",
+        obstacle: "Descontar sin motivo destruye la marca, pero tener stock clavado más de 3 semanas inmoviliza el capital.",
+        question: "¿Cómo justifico cada precio tachado y cómo genero urgencia real en el carrito sin mentir con reservas falsas?",
+        solution: "1) Precio tachado siempre con Etiqueta de Motivo (LANZAMIENTO, ROTACIÓN STOCK, ÚLTIMAS UNIDADES, PRECIO COMBINADO). 2) A los 21 días se activa AUTO_PROMO_AGE. 3) Cross-Selling en 2 Tiempos: Precio Especial sumándolo HOY en carrito vs. Voucher Semanal por 7 días un +10% más caro y sujeto a disponibilidad sin reserva."
+      },
+      {
+        id: "COM-03",
+        cat: "COMERCIAL",
+        origin: "Nació en: 3 - Entretelado",
+        title: "5. Barrido de 4 Anillos Geográficos + Ecuación de 3 Motores",
+        obstacle: "Mirar solo competidores minoristas encierra en una visión de túnel donde intentás vivir vendiendo 300 unidades sueltas.",
+        question: "¿Quiénes componen la cadena de valor completa de mi ciudad antes de elegir qué comprar y a quién venderle?",
+        solution: "Barrer siempre con search_web: 1) Mayoristas locales instalados, 2) Fábricas de origen, 3) Compradores B2B recurrentes, 4) Aliados de ticket alto. Facturación apoyada en 3 Motores: Packs B2C + Recurrencia B2B + Obras/Alianzas."
+      },
+      {
+        id: "COM-04",
+        cat: "COMERCIAL",
+        origin: "Nació en: 3 - Entretelado",
+        title: "6. Cross-Selling sin Canibalización + Trigger 'Compartir por WhatsApp SIN Precio'",
+        obstacle: "Ofrecer en carrito algo más barato de la misma categoría baja el ticket; y compartir ficha con precio por WhatsApp evita que el receptor entre a la web.",
+        question: "¿Qué sí puedo ofrecer más económico en el carrito y cómo convierto el compartido por WhatsApp en visitas traqueadas?",
+        solution: "Misma categoría más barata = PROHIBIDO. Otra categoría complementaria (incluso de menor valor) = HABILITADO porque suma arriba del ticket. Al detectar Scroll + >9s se activa 'Compartir por WhatsApp SIN Precio' (?ref=wa_share)."
+      },
+      {
+        id: "B2B-01",
+        cat: "B2B_ADS",
+        origin: "Nació en: 4 - Star Union & 1 - Zaguán",
+        title: "7. Construcción Académica del ICP ('Capa 1 de Guerra') en 2 Versiones + Mapa Iterativo",
+        obstacle: "Hacer piezas, mailings o landings sin desglosar primero la psicología del Comité de Compra produce resultados 'flat' y genéricos.",
+        question: "¿Cómo construyo una base conceptual profunda sin entregar un documento eterno e inleíble en la primera vuelta?",
+        solution: "Primero se investiga el ICP a fondo con 2 salidas: Versión 1 (Lectura de Gerencia/Cabezas) y Versión 2 (Operativa para Mailing, Ads, SEO/GEO y UX). Primera entrega obligatoria en formato Mapa/Árbol de Ítems para iterar rápido con Ariana."
+      },
+      {
+        id: "B2B-02",
+        cat: "B2B_ADS",
+        origin: "Nació en: 4 - Star Union & 2 - Fabricio Rivas",
+        title: "8. Solución al Dilema de WhatsApp Contaminado en Google Ads (Empresas vs. Postulantes/Ruido)",
+        obstacle: "En B2B (ej. limpieza), el WhatsApp se llena de CVs de personas buscando trabajo o consorcios chicos; si Ads optimiza por clic en WhatsApp, gasta todo en desempleados.",
+        question: "¿Cómo mantengo vivo el WhatsApp para clientes reales sin alimentar con basura al algoritmo de Google Ads?",
+        solution: "1) Bifurcador previo al abrir WhatsApp: '🏢 Quiero cotizar para mi Empresa' vs. '👷 Busco trabajo / RRHH'. 2) En cuentas chicas no inflar eventos clave falsos. 3) Mantener tabla comparativa de Negativas Actuales vs. Nuevas Negativas a agregar."
+      },
+      {
+        id: "B2B-03",
+        cat: "B2B_ADS",
+        origin: "Nació en: 4 - Star Union",
+        title: "9. Solución Dual: Vendedor que quiere mandar PDF por WhatsApp vs. Trazabilidad",
+        obstacle: "El comercial quiere mandar el PDF adjunto por WhatsApp, pero un archivo PDF suelto no te avisa quién lo abrió ni qué miró.",
+        question: "¿Cómo le doy al vendedor su PDF impecable y a la vez mantengo trazabilidad e inteligencia comercial?",
+        solution: "1) Los Brochures viven en URLs ocultas del menú principal pero públicas y con SEO (para mandar link traqueado). 2) El PDF descargable (rehecho, sin COVID, con botón Deshacer/Undo y Vista Previa real) lleva links/QR internos traqueados hacia las verticales."
+      },
+      {
+        id: "B2B-04",
+        cat: "B2B_ADS",
+        origin: "Nació en: 4 - Star Union",
+        title: "10. Mailing B2B (Reenvío a 5 días) + Ingesta de CSV de Clics en Radar por Dominio",
+        obstacle: "En B2B de abonos millonarios nadie compra por impulso con un newsletter suelto, pero los clics revelan qué empresas están buscando proveedor.",
+        question: "¿Cómo convierto las aperturas y clics de Perfit/Mailing en llamados comerciales concretos?",
+        solution: "Cadencia: Envío 1 + Reenvío a los 5 días a activos que no abrieron. Exportar el .CSV de los primeros 100 clics e importarlo al Radar Comercial agrupando por Dominio (@empresa.com) para accionar directo."
+      },
+      {
+        id: "ART-01",
+        cat: "ARTE_OPS",
+        origin: "Nació en: Todos los Proyectos",
+        title: "11. Links para ABRIR en 1 Clic + Cajita con Botón Copiar (📋) en 1 Clic (Cero Pintar con el Mouse)",
+        obstacle: "Los chips amarillos </> archivo.html abrían el código fuente; y poner solo el link azul obligaba a arrastrar el mouse, pintar toda la URL y copiarla para poder pegarla en WhatsApp.",
+        question: "¿Cómo abro en 1 clic Y ADEMÁS copio la URL en 1 clic sin arrastrar el mouse ni abrir el navegador?",
+        solution: "Cada vez que el agente entrega un link para ver o compartir, entrega: 1) El botón [👉 ABRIR] + [📲 MANDAR POR WHATSAPP], 2) Abajo una cajita con botón Copiar (📋) de 1 clic arriba a la derecha, y 3) Te lo deja auto-copiado en el portapapeles de la Mac (pbcopy) listo para hacer Cmd+V en WhatsApp."
+      },
+      {
+        id: "ART-02",
+        cat: "ARTE_OPS",
+        origin: "Nació hoy: Entrevista del Clon",
+        title: "12. Método de Bajada de Línea a Especialistas ('Objetivo Primero y Hacia Atrás Sin Ahogar en Detalles')",
+        obstacle: "Si al especialista (trafficker, diseñador, vendedor o agente) se le tiran mil detalles sueltos de entrada, se pierde y entrega algo 'flat' sin alma comercial.",
+        question: "¿Qué es lo que hacen mal cuando trabajan solos y cuál es la fórmula exacta para pedirles las cosas?",
+        solution: "Explicar sin abundar en detalles secundarios: 1) Primero hacer entender y asumir el OBJETIVO CONCRETO final de negocio, y 2) Recién con eso asumido, ir de adelante hacia atrás desglosando qué acciones o piezas hacen falta."
+      }
+    ];
+
+    const state = JSON.parse(localStorage.getItem("ariana_clon_debate_v1") || "{}");
+
+    function showToast(msg) {
+      const t = document.getElementById("toast");
+      t.textContent = msg;
+      t.style.display = "block";
+      setTimeout(() => t.style.display = "none", 3000);
+    }
+
+    function copyText(txt) {
+      navigator.clipboard.writeText(txt);
+      showToast("✅ Copiado: " + txt);
+    }
+
+    function render(filter = "ALL") {
+      const grid = document.getElementById("cardsGrid");
+      grid.innerHTML = "";
+      RULES.filter(r => filter === "ALL" || r.cat === filter).forEach(r => {
+        const st = state[r.id] || { status: "ok", note: "" };
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+          <div class="card-top">
+            <h3>${r.title}</h3>
+            <span class="badge badge-origin">${r.origin}</span>
+          </div>
+          <div class="block"><strong>⚡ Obstáculo Real</strong>${r.obstacle}</div>
+          <div class="block"><strong>🤔 Qué me pregunté</strong>${r.question}</div>
+          <div class="block win"><strong>✅ Sistema / Regla en tu Clon</strong>${r.solution}</div>
+          <div class="actions">
+            <button class="status-btn ${st.status === 'ok' ? 'active-ok' : ''}" onclick="setStatus('${r.id}', 'ok')">✅ Bien entendido</button>
+            <button class="status-btn ${st.status === 'fix' ? 'active-fix' : ''}" onclick="setStatus('${r.id}', 'fix')">⚠️ Malentendido / Corregir</button>
+            <button class="status-btn ${st.status === 'evo' ? 'active-evo' : ''}" onclick="setStatus('${r.id}', 'evo')">🚀 Evolucionó en la práctica</button>
+          </div>
+          <textarea id="note-${r.id}" class="${st.status !== 'ok' || st.note ? 'visible' : ''}" placeholder="Escribí acá tu corrección, debate o cómo evolucionó esta regla en la práctica..." oninput="saveNote('${r.id}', this.value)">${st.note || ""}</textarea>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    function setStatus(id, status) {
+      if (!state[id]) state[id] = { status: "ok", note: "" };
+      state[id].status = status;
+      localStorage.setItem("ariana_clon_debate_v1", JSON.stringify(state));
+      render(currentFilter);
+    }
+
+    function saveNote(id, val) {
+      if (!state[id]) state[id] = { status: "ok", note: "" };
+      state[id].note = val;
+      localStorage.setItem("ariana_clon_debate_v1", JSON.stringify(state));
+    }
+
+    let currentFilter = "ALL";
+    function filterCards(cat, btn) {
+      currentFilter = cat;
+      document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      render(cat);
+    }
+
+    function exportDebate() {
+      const lines = ["🧬 **AJUSTES Y DEBATE SOBRE MI CLON (ARIANA):**\n"];
+      RULES.forEach(r => {
+        const st = state[r.id];
+        if (st && (st.status !== "ok" || (st.note && st.note.trim() !== ""))) {
+          const label = st.status === "fix" ? "⚠️ CORREGIR MALENTENDIDO" : (st.status === "evo" ? "🚀 EVOLUCIONÓ EN LA PRÁCTICA" : "💬 NOTA");
+          lines.push(`- **${r.title}** [${label}]: ${st.note || "(Revisar este punto)"}`);
+        }
+      });
+      const newT = document.getElementById("newTitle").value.trim();
+      const newB = document.getElementById("newBody").value.trim();
+      if (newT || newB) {
+        lines.push(`\n➕ **NUEVO HALLAZGO PARA SUMAR AL CLON — ${newT}:**\n${newB}`);
+      }
+      if (lines.length === 1) {
+        lines.push("- Revisé el tablero del Clon: todo lo actual está validado. Quiero debatir/agregar lo siguiente:");
+      }
+      navigator.clipboard.writeText(lines.join("\n"));
+      showToast("✅ Copiado al portapapeles. Pegalo directo en el chat.");
+    }
+
+    render();
+  </script>
+</body>
+</html>

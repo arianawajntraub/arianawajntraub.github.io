@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>🌳 Linktree General Maestro de Ariana — Todas las Cuentas, Ideas y Entregables</title>
+  <style>
+    :root {
+      --bg: #f1f5f9;
+      --card: #ffffff;
+      --ink: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      padding: 18px 14px 80px;
+      line-height: 1.45;
+    }
+    .container { max-width: 1180px; margin: 0 auto; }
+    .top-nav {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .nav-pill {
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      color: #0f172a;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 13px;
+      text-decoration: none;
+    }
+    .nav-pill.active {
+      background: #0f172a;
+      color: #fff;
+      border-color: #0f172a;
+    }
+    header {
+      background: #0f172a;
+      color: #fff;
+      padding: 24px 26px;
+      border-radius: 16px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    header h1 { margin: 0 0 6px; font-size: 22px; }
+    header p { margin: 0; color: #cbd5e1; font-size: 13.5px; max-width: 720px; }
+    .jump-bar {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 22px;
+    }
+    .jump-bar a {
+      background: #fff;
+      border: 1px solid #cbd5e1;
+      padding: 8px 13px;
+      border-radius: 10px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #0f172a;
+      text-decoration: none;
+    }
+    .proj-card {
+      background: var(--card);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 22px;
+      box-shadow: 0 2px 10px rgba(15,23,42,0.05);
+      border: 1px solid var(--border);
+    }
+    .proj-badge {
+      display: inline-block;
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 4px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+      margin-bottom: 6px;
+    }
+    .proj-header h2 { margin: 0 0 4px; font-size: 19px; }
+    .commit-line { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+    .links-list h3 {
+      font-size: 13px;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 10px;
+      letter-spacing: 0.03em;
+    }
+    .link-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 12px 14px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      margin-bottom: 8px;
+    }
+    .link-title { font-weight: 700; font-size: 14.5px; color: #0f172a; }
+    .link-meta { font-size: 12px; color: #64748b; margin-top: 2px; word-break: break-all; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #334155; }
+    .link-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+    .btn-act {
+      border: none;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 12.5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .btn-open { background: #0f172a; color: #fff; }
+    .btn-copy { background: #e2e8f0; color: #0f172a; }
+    .btn-wa { background: #dcfce7; color: #14532d; }
+    .two-cols {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 14px;
+      margin-top: 16px;
+    }
+    .info-box {
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-size: 13.5px;
+    }
+    .info-box h4 { margin: 0 0 8px; font-size: 13.5px; }
+    .info-box ul { margin: 0; padding-left: 18px; }
+    .info-box li { margin-bottom: 6px; }
+    .ideas-box { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .pend-box { background: #fffbeb; border: 1px solid #fde68a; }
+    .toast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      left: 20px;
+      max-width: 420px;
+      margin: 0 auto;
+      background: #0f172a;
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 10px;
+      font-weight: 700;
+      text-align: center;
+      display: none;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top-nav">
+      <a href="HUB_GENERAL_ARIANA.html" class="nav-pill active">🌳 1. Mi Linktree General (Todas las Cuentas, Sitios y Pendientes)</a>
+      <a href="CLON_ARIANA_PANEL_VIVO.html" class="nav-pill">🧬 2. Mi Clon Evolutivo + Tabla de Comandos</a>
+    </div>
+
+    <header>
+      <div>
+        <h1>🌳 Linktree General Maestro de Ariana — Todas tus Cuentas en 1 Solo Lugar</h1>
+        <p>Se actualiza automáticamente cada vez que cualquier proyecto publica un sitio, un formulario, un copy o un tema a desarrollar. En cada fila tenés botón para <strong>Abrir</strong>, <strong>Copiar URL en 1 clic</strong> (sin pintar con el mouse) o <strong>Mandar por WhatsApp</strong>. · <em>Actualizado: 28/10/2026 16:39 hs</em></p>
+      </div>
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <a href="https://wa.me/?text=🌳%20Mi%20Linktree%20General%20Maestro%20(Todas%20las%20Cuentas):%20https://alliance-phrases-camcorders-underlying.trycloudflare.com/HUB_GENERAL_ARIANA.html" target="_blank" style="background:#25D366; color:#052e16; font-weight:800; text-decoration:none; padding:12px 16px; border-radius:10px; font-size:13.5px;">📲 Guardarme este Linktree en WhatsApp</a>
+      </div>
+    </header>
+
+    <div class="jump-bar">
+      <a href="#0-clon">0 · Clon & Comandos</a>
+      <a href="#4-star-union">4 · Star Union</a>
+      <a href="#1-zaguan">1 · Zaguán</a>
+      <a href="#2-fabricio">2 · Fabricio Rivas</a>
+      <a href="#3-entretelado">3 · Entretelado</a>
+      <a href="#5-eliezer">5 · Eliezer Shemtov</a>
+    </div>
+
+    
+          <section class="proj-card" id="0-clon" style="border-top: 5px solid #10b981;">
+            <div class="proj-header">
+              <div>
+                <span class="proj-badge" style="background:#10b981;">0 · MATRIZ CENTRAL</span>
+                <h2>0 - Dirección General & Clon Evolutivo de Ariana</h2>
+                <div class="commit-line">🔄 Último movimiento: Sincronizado en carpeta local / Drive</div>
+              </div>
+            </div>
+
+            <div class="links-list">
+              <h3>🌐 Links, Sitios y Entregables Vivos (1 Clic para Abrir, Copiar o Mandar por WhatsApp)</h3>
+              
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🧬 Panel Vivo del Clon Evolutivo + Tabla de Comandos</div>
+                  <div class="link-meta">Panel Central (Celular / WhatsApp) · <span class="mono">https://alliance-phrases-camcorders-underlying.trycloudflare.com/</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://alliance-phrases-camcorders-underlying.trycloudflare.com/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://alliance-phrases-camcorders-underlying.trycloudflare.com/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🧬 Panel Vivo del Clon Evolutivo + Tabla de Comandos:%20https://alliance-phrases-camcorders-underlying.trycloudflare.com/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🌐 Linktree General Maestro (Todas las Cuentas)</div>
+                  <div class="link-meta">Hub General en Vivo · <span class="mono">https://alliance-phrases-camcorders-underlying.trycloudflare.com/HUB_GENERAL_ARIANA.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://alliance-phrases-camcorders-underlying.trycloudflare.com/HUB_GENERAL_ARIANA.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://alliance-phrases-camcorders-underlying.trycloudflare.com/HUB_GENERAL_ARIANA.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🌐 Linktree General Maestro (Todas las Cuentas):%20https://alliance-phrases-camcorders-underlying.trycloudflare.com/HUB_GENERAL_ARIANA.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+            </div>
+
+            <div class="two-cols">
+              <div class="info-box ideas-box">
+                <h4>✍️ Ideas, Copys y Reglas Activas de la Cuenta</h4>
+                <ul><li>Frase Clave Universal: 'Actualizá la memoria de esta cuenta con esto'</li><li>Bajada a especialistas: 1° Objetivo final de negocio, 2° De atrás hacia adelante sin ahogar en detalles</li><li>Regla de Rigor: Maquetar 1 muestra antes de hacer 15 PDFs; datos expuestos (UI/BCU) siempre con fuente oficial y cadencia diaria</li></ul>
+              </div>
+              <div class="info-box pend-box">
+                <h4>⏳ Temas a Desarrollar / Próximos Pasos</h4>
+                <ul><li>Explicar estructura de prompt de 3 pasos cuando Ariana lo pida (mientras corre automática por Regla #8)</li><li>Destilación automática cada 48 hs (Cron activo)</li></ul>
+              </div>
+            </div>
+          </section>
+        
+          <section class="proj-card" id="4-star-union" style="border-top: 5px solid #15803d;">
+            <div class="proj-header">
+              <div>
+                <span class="proj-badge" style="background:#15803d;">4 · B2B ARGENTINA</span>
+                <h2>4 - STAR UNION S.R.L. (Limpieza Corporativa e Industrial)</h2>
+                <div class="commit-line">🔄 Último movimiento: 8cd9388 · chore(star-union): update Linktree Central labels and Open Sans typography (28 minutes ago)</div>
+              </div>
+            </div>
+
+            <div class="links-list">
+              <h3>🌐 Links, Sitios y Entregables Vivos (1 Clic para Abrir, Copiar o Mandar por WhatsApp)</h3>
+              
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🌳 Linktree Central de Star Union (/accesos/)</div>
+                  <div class="link-meta">Linktree del Proyecto · <span class="mono">https://wajntraub.ar/staruniontest/accesos/</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://wajntraub.ar/staruniontest/accesos/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/accesos/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🌳 Linktree Central de Star Union (/accesos/):%20https://wajntraub.ar/staruniontest/accesos/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📋 Formulario de Relevamiento Gerencial (Para Mauro)</div>
+                  <div class="link-meta">Formulario Interactivo + Pedido Excel Clientes · <span class="mono">https://wajntraub.ar/staruniontest/relevamiento-gerencia/</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://wajntraub.ar/staruniontest/relevamiento-gerencia/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/relevamiento-gerencia/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📋 Formulario de Relevamiento Gerencial (Para Mauro):%20https://wajntraub.ar/staruniontest/relevamiento-gerencia/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🎯 Radar Comercial B2B (Cruces Perfit CSV por Dominio)</div>
+                  <div class="link-meta">Herramienta Comercial · <span class="mono">https://wajntraub.ar/staruniontest/radar-comercial/</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://wajntraub.ar/staruniontest/radar-comercial/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/radar-comercial/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🎯 Radar Comercial B2B (Cruces Perfit CSV por Dominio):%20https://wajntraub.ar/staruniontest/radar-comercial/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🏢 Sitio Público Completo (12 Páginas 100% SEO + GEO + OG)</div>
+                  <div class="link-meta">Sitio Web Institucional · <span class="mono">https://wajntraub.ar/staruniontest/</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://wajntraub.ar/staruniontest/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🏢 Sitio Público Completo (12 Páginas 100% SEO + GEO + OG):%20https://wajntraub.ar/staruniontest/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📑 Hub de 16 Brochures PDF + Editor con Deshacer</div>
+                  <div class="link-meta">Material Comercial B2B · <span class="mono">https://wajntraub.ar/staruniontest/brochures/</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://wajntraub.ar/staruniontest/brochures/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/brochures/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📑 Hub de 16 Brochures PDF + Editor con Deshacer:%20https://wajntraub.ar/staruniontest/brochures/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📘 Dossier Corporativo Interactivo</div>
+                  <div class="link-meta">Presentación Ejecutiva · <span class="mono">https://wajntraub.ar/staruniontest/dossier/</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://wajntraub.ar/staruniontest/dossier/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/dossier/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📘 Dossier Corporativo Interactivo:%20https://wajntraub.ar/staruniontest/dossier/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📧 Pieza Mailing Perfit #119 (Octubre 26 Reenvío)</div>
+                  <div class="link-meta">Historial Perfit (Fotos Recortadas + Métricas) · <span class="mono">https://online-versions-prod.s3.amazonaws.com/starunionsrl/starunionsrl_bulk_119/dsvfth_7535c9</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://online-versions-prod.s3.amazonaws.com/starunionsrl/starunionsrl_bulk_119/dsvfth_7535c9" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://online-versions-prod.s3.amazonaws.com/starunionsrl/starunionsrl_bulk_119/dsvfth_7535c9')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📧 Pieza Mailing Perfit #119 (Octubre 26 Reenvío):%20https://online-versions-prod.s3.amazonaws.com/starunionsrl/starunionsrl_bulk_119/dsvfth_7535c9" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+            </div>
+
+            <div class="two-cols">
+              <div class="info-box ideas-box">
+                <h4>✍️ Ideas, Copys y Reglas Activas de la Cuenta</h4>
+                <ul><li>Estética Mauro: Blanco puro dominante, cero azul/naranja kermés, sin efecto bandera de Brasil, dirección Guaminí 5657 CABA</li><li>Cleany refinada: Solo en Capacitaciones/ISO (gorrita egreso) y cápsulas técnicas 'El Check Técnico de Cleany'</li><li>Bifurcador pre-WhatsApp: Separar empresas que cotizan vs. postulantes que buscan empleo (para no ensuciar conversiones de Mariel en Google Ads)</li></ul>
+              </div>
+              <div class="info-box pend-box">
+                <h4>⏳ Temas a Desarrollar / Próximos Pasos</h4>
+                <ul><li>Circuito De Atrás hacia Adelante: 1) Recibir Excel de clientes reales de Mauro, 2) Extraer @dominios actuales, 3) Cruzar con CSV de últimos clics de Perfit y excluir clientes actuales antes de escribirles</li><li>Sumar links /shares/ de meses anteriores de Perfit para usar todas las fotos ya recortadas del CDN y reemplazar fotos con doble logo en la web</li><li>Sumar verticales Aeropuertos, Shoppings y Concesionarios con protagonismo propio</li></ul>
+              </div>
+            </div>
+          </section>
+        
+          <section class="proj-card" id="1-zaguan" style="border-top: 5px solid #0f172a;">
+            <div class="proj-header">
+              <div>
+                <span class="proj-badge" style="background:#0f172a;">1 · REAL ESTATE PDE</span>
+                <h2>1 - ZAGUÁN (Inmobiliaria & Desarrollos Punta del Este)</h2>
+                <div class="commit-line">🔄 Último movimiento: Sincronizado en carpeta local / Drive</div>
+              </div>
+            </div>
+
+            <div class="links-list">
+              <h3>🌐 Links, Sitios y Entregables Vivos (1 Clic para Abrir, Copiar o Mandar por WhatsApp)</h3>
+              
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🏛️ Sitio Web Zaguán Propiedades (Producción)</div>
+                  <div class="link-meta">Sitio Web Principal · <span class="mono">https://zaguanpropiedades.com/</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://zaguanpropiedades.com/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://zaguanpropiedades.com/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🏛️ Sitio Web Zaguán Propiedades (Producción):%20https://zaguanpropiedades.com/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🏢 Fichas de Emprendimientos (Betania IV, Eve Tower, Golden Rise)</div>
+                  <div class="link-meta">Catálogo de Proyectos · <span class="mono">https://zaguanpropiedades.com/novedades-del-este/</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://zaguanpropiedades.com/novedades-del-este/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://zaguanpropiedades.com/novedades-del-este/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🏢 Fichas de Emprendimientos (Betania IV, Eve Tower, Golden Rise):%20https://zaguanpropiedades.com/novedades-del-este/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+            </div>
+
+            <div class="two-cols">
+              <div class="info-box ideas-box">
+                <h4>✍️ Ideas, Copys y Reglas Activas de la Cuenta</h4>
+                <ul><li>Curaduría arquitectónica, valor por m² real e inversión patrimonial en Punta del Este</li><li>Jerarquía de fichas: Ley de Vivienda Promovida (10 años exoneración impositiva) separada de Proyectos de Pozo y Costaneros</li></ul>
+              </div>
+              <div class="info-box pend-box">
+                <h4>⏳ Temas a Desarrollar / Próximos Pasos</h4>
+                <ul><li>Bloque de Unidades Indexadas (UI) y leyes para extranjeros: conectar únicamente a fuente oficial fidedigna (BCU / INE) aclarando cadencia de actualización diaria antes de publicar</li><li>Auditar fotos completas de Eve Tower y ficha técnica de Golden Rise</li></ul>
+              </div>
+            </div>
+          </section>
+        
+          <section class="proj-card" id="2-fabricio" style="border-top: 5px solid #1e3a8a;">
+            <div class="proj-header">
+              <div>
+                <span class="proj-badge" style="background:#1e3a8a;">2 · LEGAL & NOTARIAL UY</span>
+                <h2>2 - FABRICIO RIVAS (Escribano en Punta del Este / Maldonado)</h2>
+                <div class="commit-line">🔄 Último movimiento: 0b9508c · Initial commit (3 days ago)</div>
+              </div>
+            </div>
+
+            <div class="links-list">
+              <h3>🌐 Links, Sitios y Entregables Vivos (1 Clic para Abrir, Copiar o Mandar por WhatsApp)</h3>
+              
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">⚖️ Sitio Web Escribano Fabricio Rivas</div>
+                  <div class="link-meta">Sitio Web + Blog SEO/GEO · <span class="mono">https://fabriciorivas.com/</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://fabriciorivas.com/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://fabriciorivas.com/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=⚖️ Sitio Web Escribano Fabricio Rivas:%20https://fabriciorivas.com/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+            </div>
+
+            <div class="two-cols">
+              <div class="info-box ideas-box">
+                <h4>✍️ Ideas, Copys y Reglas Activas de la Cuenta</h4>
+                <ul><li>Tuteo formal estricto ('tú compras, tu propiedad') para comprador argentino, brasileño, chileno y europeo en Uruguay</li><li>Prohibido prometer precios cerrados de aranceles en web; derivar siempre a consulta personalizada por WhatsApp</li></ul>
+              </div>
+              <div class="info-box pend-box">
+                <h4>⏳ Temas a Desarrollar / Próximos Pasos</h4>
+                <ul><li>Unificar la estrategia de automatización y calendario de artículos SEO/GEO con la vidriera principal</li><li>Validar fuentes oficiales notariales/impositivas uruguayas en cada nota técnica para extranjeros</li></ul>
+              </div>
+            </div>
+          </section>
+        
+          <section class="proj-card" id="3-entretelado" style="border-top: 5px solid #78350f;">
+            <div class="proj-header">
+              <div>
+                <span class="proj-badge" style="background:#78350f;">3 · E-COMMERCE & B2B</span>
+                <h2>3 - ENTRETELADO (Textil Hogar & Hotelería — Uruguay)</h2>
+                <div class="commit-line">🔄 Último movimiento: de67ff7 · feat(seo-naming): implement two-layer naming architecture (exact search keywords in H1/slug/ML + conceptual hooks in badges/subtitles) (26 hours ago)</div>
+              </div>
+            </div>
+
+            <div class="links-list">
+              <h3>🌐 Links, Sitios y Entregables Vivos (1 Clic para Abrir, Copiar o Mandar por WhatsApp)</h3>
+              
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🛏️ Tienda E-Commerce Entretelado (Vidriera Pública)</div>
+                  <div class="link-meta">Tienda Next.js · <span class="mono">https://99kg41rtkh.c37.airoapp.ai/</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://99kg41rtkh.c37.airoapp.ai/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://99kg41rtkh.c37.airoapp.ai/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🛏️ Tienda E-Commerce Entretelado (Vidriera Pública):%20https://99kg41rtkh.c37.airoapp.ai/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🔐 Panel Admin + Simulador Financiero + Cerebro Maestro</div>
+                  <div class="link-meta">Backoffice Privado (/admin) · <span class="mono">https://99kg41rtkh.c37.airoapp.ai/admin</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://99kg41rtkh.c37.airoapp.ai/admin" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://99kg41rtkh.c37.airoapp.ai/admin')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🔐 Panel Admin + Simulador Financiero + Cerebro Maestro:%20https://99kg41rtkh.c37.airoapp.ai/admin" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+            </div>
+
+            <div class="two-cols">
+              <div class="info-box ideas-box">
+                <h4>✍️ Ideas, Copys y Reglas Activas de la Cuenta</h4>
+                <ul><li>Naming de Doble Capa: Palabra clave literal masiva en H1/URL/ML ('Set Pie de Cama XL + 2 Fundas 50x70 Algodón') + Concepto en Badge ('Entre Huéspedes', 'Cero Plancha')</li><li>Candado #6: Nombres de fábricas (Aldeana, Wossen, Alondra, Blanco Galil) ocultos exclusivamente en /admin</li></ul>
+              </div>
+              <div class="info-box pend-box">
+                <h4>⏳ Temas a Desarrollar / Próximos Pasos</h4>
+                <ul><li>Cierre de compra inicial bajo regla 60% Tracción / 25% Margen / 15% Imagen y validación de costos en USD</li><li>Activación de alianzas B2B con administradoras de alquiler temporario en Punta del Este</li></ul>
+              </div>
+            </div>
+          </section>
+        
+          <section class="proj-card" id="5-eliezer" style="border-top: 5px solid #581c87;">
+            <div class="proj-header">
+              <div>
+                <span class="proj-badge" style="background:#581c87;">5 · COMUNIDAD & EXPANSIÓN</span>
+                <h2>5 - ELIEZER SHEMTOV (Comunidad, Contenido & Expansión PDE)</h2>
+                <div class="commit-line">🔄 Último movimiento: Sincronizado en carpeta local / Drive</div>
+              </div>
+            </div>
+
+            <div class="links-list">
+              <h3>🌐 Links, Sitios y Entregables Vivos (1 Clic para Abrir, Copiar o Mandar por WhatsApp)</h3>
+              
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">✨ Carpeta Central de Proyecto (Presentación Stakeholders + Máquina Semanal)</div>
+                  <div class="link-meta">Frente de Guerra Retroalimentado · <span class="mono">https://alliance-phrases-camcorders-underlying.trycloudflare.com/HUB_GENERAL_ARIANA.html#5-eliezer</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://alliance-phrases-camcorders-underlying.trycloudflare.com/HUB_GENERAL_ARIANA.html#5-eliezer" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://alliance-phrases-camcorders-underlying.trycloudflare.com/HUB_GENERAL_ARIANA.html#5-eliezer')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=✨ Carpeta Central de Proyecto (Presentación Stakeholders + Máquina Semanal):%20https://alliance-phrases-camcorders-underlying.trycloudflare.com/HUB_GENERAL_ARIANA.html#5-eliezer" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+            </div>
+
+            <div class="two-cols">
+              <div class="info-box ideas-box">
+                <h4>✍️ Ideas, Copys y Reglas Activas de la Cuenta</h4>
+                <ul><li>Retroalimentación Viva: Charla Previa ↔ Presentación Mágica (Stakeholders) ↔ Máquina de los Miércoles ↔ Máquina de los Jueves ↔ YouTube & Ads</li><li>Lo que se produce los Miércoles y Jueves alimenta de casos reales a la Presentación Mágica y a las campañas</li></ul>
+              </div>
+              <div class="info-box pend-box">
+                <h4>⏳ Temas a Desarrollar / Próximos Pasos</h4>
+                <ul><li>Publicar el Linktree específico de entregables de Eliezer Shemtov (Presentación Mágica + Pack Miércoles/Jueves) en URL viva</li><li>Conectar calendario de contenidos de Miércoles y Jueves con pauta de amplificación</li></ul>
+              </div>
+            </div>
+          </section>
+        
+  </div>
+
+  <div id="toast" class="toast"></div>
+  <script>
+    function copyUrl(txt) {
+      navigator.clipboard.writeText(txt);
+      const t = document.getElementById("toast");
+      t.textContent = "✅ URL copiada en 1 clic: " + txt;
+      t.style.display = "block";
+      setTimeout(() => t.style.display = "none", 2800);
+    }
+  </script>
+</body>
+</html>
