@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>🌳 Linktree General Maestro de Ariana — Todas las Cuentas, Ideas y Entregables</title>
+  <title>🌳 Tablero de Dirección General y Linktree Maestro — Ariana Wajntraub</title>
   <style>
     :root {
       --bg: #f1f5f9;
@@ -22,12 +22,14 @@
       padding: 18px 14px 80px;
       line-height: 1.45;
     }
-    .container { max-width: 1180px; margin: 0 auto; }
+    .container { max-width: 1220px; margin: 0 auto; }
     .top-nav {
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
       margin-bottom: 16px;
+      align-items: center;
+      justify-content: space-between;
     }
     .nav-pill {
       background: #fff;
@@ -47,38 +49,46 @@
     header {
       background: #0f172a;
       color: #fff;
-      padding: 24px 26px;
+      padding: 22px 26px;
       border-radius: 16px;
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
       gap: 16px;
     }
-    header h1 { margin: 0 0 6px; font-size: 22px; }
-    header p { margin: 0; color: #cbd5e1; font-size: 13.5px; max-width: 720px; }
+    header h1 { margin: 0 0 6px; font-size: 21px; }
+    header p { margin: 0; color: #cbd5e1; font-size: 13.5px; max-width: 780px; }
     .jump-bar {
       display: flex;
       gap: 8px;
       flex-wrap: wrap;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
+      position: sticky;
+      top: 8px;
+      z-index: 50;
+      background: rgba(241, 245, 249, 0.92);
+      backdrop-filter: blur(8px);
+      padding: 8px 0;
     }
     .jump-bar a {
       background: #fff;
       border: 1px solid #cbd5e1;
-      padding: 8px 13px;
+      padding: 9px 14px;
       border-radius: 10px;
-      font-size: 12.5px;
-      font-weight: 700;
+      font-size: 13px;
+      font-weight: 800;
       color: #0f172a;
       text-decoration: none;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
     }
+    .jump-bar a:hover { background: #0f172a; color: #fff; }
     .proj-card {
       background: var(--card);
       border-radius: 16px;
-      padding: 22px;
-      margin-bottom: 22px;
+      padding: 24px;
+      margin-bottom: 24px;
       box-shadow: 0 2px 10px rgba(15,23,42,0.05);
       border: 1px solid var(--border);
     }
@@ -92,14 +102,15 @@
       letter-spacing: 0.04em;
       margin-bottom: 6px;
     }
-    .proj-header h2 { margin: 0 0 4px; font-size: 19px; }
-    .commit-line { font-size: 12px; color: var(--muted); margin-bottom: 14px; }
+    .proj-header h2 { margin: 0 0 4px; font-size: 20px; }
+    .commit-line { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
     .links-list h3 {
-      font-size: 13px;
+      font-size: 12.5px;
       text-transform: uppercase;
       color: var(--muted);
       margin: 0 0 10px;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.04em;
+      font-weight: 800;
     }
     .link-item {
       display: flex;
@@ -113,10 +124,10 @@
       border-radius: 12px;
       margin-bottom: 8px;
     }
-    .link-title { font-weight: 700; font-size: 14.5px; color: #0f172a; }
+    .link-title { font-weight: 800; font-size: 14px; color: #0f172a; }
     .link-meta { font-size: 12px; color: #64748b; margin-top: 2px; word-break: break-all; }
     .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: #334155; }
-    .link-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+    .link-btns { display: flex; gap: 8px; flex-wrap: wrap; shrink: 0; }
     .btn-act {
       border: none;
       padding: 8px 12px;
@@ -132,26 +143,96 @@
     .btn-wa { background: #dcfce7; color: #14532d; }
     .two-cols {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 14px;
-      margin-top: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
     }
     .info-box {
-      padding: 14px 16px;
+      padding: 16px;
       border-radius: 12px;
       font-size: 13.5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
-    .info-box h4 { margin: 0 0 8px; font-size: 13.5px; }
-    .info-box ul { margin: 0; padding-left: 18px; }
-    .info-box li { margin-bottom: 6px; }
+    .info-box h4 { margin: 0 0 10px; font-size: 14px; font-weight: 800; }
+    .ideas-ul { margin: 0; padding-left: 18px; }
+    .ideas-ul li { margin-bottom: 8px; padding: 2px 4px; border-radius: 4px; }
+    .ideas-ul li:focus { background: #fff; outline: 2px solid #059669; }
+    .pend-ul { list-style: none; margin: 0; padding: 0; }
+    .pend-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      margin-bottom: 8px;
+      padding: 4px;
+      border-radius: 6px;
+    }
+    .pend-item input[type="checkbox"] {
+      margin-top: 4px;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .pend-item.done span {
+      text-decoration: line-through;
+      opacity: 0.55;
+    }
     .ideas-box { background: #f0fdf4; border: 1px solid #bbf7d0; }
     .pend-box { background: #fffbeb; border: 1px solid #fde68a; }
+    .add-row {
+      display: flex;
+      gap: 6px;
+      margin-top: 10px;
+    }
+    .add-row input {
+      flex: 1;
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      font-size: 12.5px;
+    }
+    .add-row button {
+      background: #0f172a;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .notes-area {
+      margin-top: 14px;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+    .notes-area label {
+      display: block;
+      font-size: 12.5px;
+      font-weight: 800;
+      color: #334155;
+      margin-bottom: 6px;
+    }
+    .notes-area textarea {
+      width: 100%;
+      min-height: 68px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      padding: 8px 10px;
+      font-family: inherit;
+      font-size: 13px;
+      resize: vertical;
+    }
     .toast {
       position: fixed;
       bottom: 20px;
       right: 20px;
       left: 20px;
-      max-width: 420px;
+      max-width: 440px;
       margin: 0 auto;
       background: #0f172a;
       color: #fff;
@@ -167,173 +248,375 @@
 <body>
   <div class="container">
     <div class="top-nav">
-      <a href="HUB_GENERAL_ARIANA.html" class="nav-pill active">🌳 1. Mi Linktree General (Todas las Cuentas, Sitios y Pendientes)</a>
-      <a href="CLON_ARIANA_PANEL_VIVO.html" class="nav-pill">🧬 2. Mi Clon Evolutivo + Tabla de Comandos</a>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;">
+        <a href="HUB_GENERAL_ARIANA.html" class="nav-pill active">🌳 1. Tablero General de Cuentas, Herramientas y Pendientes</a>
+        <a href="CLON_ARIANA_PANEL_VIVO.html" class="nav-pill">🧬 2. Mi Clon Evolutivo + Tabla de Comandos</a>
+      </div>
+      <button onclick="resetCustomState()" style="background:#e2e8f0;border:none;padding:8px 12px;border-radius:8px;font-size:12px;font-weight:700;cursor:pointer;">🔄 Recargar estado base del sistema</button>
     </div>
 
     <header>
       <div>
-        <h1>🌳 Linktree General Maestro de Ariana — Todas tus Cuentas en 1 Solo Lugar</h1>
-        <p>Se actualiza automáticamente cada vez que cualquier proyecto publica un sitio, un formulario, un copy o un tema a desarrollar. En cada fila tenés botón para <strong>Abrir</strong>, <strong>Copiar URL en 1 clic</strong> (sin pintar con el mouse) o <strong>Mandar por WhatsApp</strong>. · <em>Actualizado: 28/10/2026 16:39 hs</em></p>
-      </div>
-      <div style="display:flex; gap:10px; flex-wrap:wrap;">
-        <a href="https://wa.me/?text=🌳%20Mi%20Linktree%20General%20Maestro%20(Todas%20las%20Cuentas):%20https://alliance-phrases-camcorders-underlying.trycloudflare.com/HUB_GENERAL_ARIANA.html" target="_blank" style="background:#25D366; color:#052e16; font-weight:800; text-decoration:none; padding:12px 16px; border-radius:10px; font-size:13.5px;">📲 Guardarme este Linktree en WhatsApp</a>
+        <h1>🌳 Tablero de Dirección General de Ariana — Tus 5 Cuentas + Clon en Vivo</h1>
+        <p>Acá tenés <strong>todas las herramientas internas, paneles, Linktrees, packs de redes, CRMs y pendientes reales</strong> de cada cuenta (no solo el sitio público). Podés <strong>tildar pendientes (`☑️`), editar cualquier texto con un clic, agregar tareas nuevas o escribir tus notas</strong> en cada cuenta. · <em>Sincronizado: 07/11/2026 16:54 hs</em></p>
       </div>
     </header>
 
     <div class="jump-bar">
-      <a href="#0-clon">0 · Clon & Comandos</a>
-      <a href="#4-star-union">4 · Star Union</a>
-      <a href="#1-zaguan">1 · Zaguán</a>
-      <a href="#2-fabricio">2 · Fabricio Rivas</a>
-      <a href="#3-entretelado">3 · Entretelado</a>
-      <a href="#5-eliezer">5 · Eliezer Shemtov</a>
+      <a href="#4-star-union">4 · Star Union (Redes + Perfit + Brochures)</a>
+      <a href="#1-zaguan">1 · Zaguán (Cabina + CRM + Landings)</a>
+      <a href="#2-fabricio">2 · Fabricio Rivas (Panel 360° + Sitio)</a>
+      <a href="#3-entretelado">3 · Entretelado (Comando Negocio + Tienda)</a>
+      <a href="#5-eliezer">5 · Eliezer Shemtov (Plan + Compendio/Pendientes)</a>
+      <a href="#0-clon">0 · Mi Clon & Reglas</a>
     </div>
 
     
-          <section class="proj-card" id="0-clon" style="border-top: 5px solid #10b981;">
+          <section class="proj-card" id="4-star-union" data-proj="4-star-union" style="border-top: 6px solid #03582d;">
             <div class="proj-header">
               <div>
-                <span class="proj-badge" style="background:#10b981;">0 · MATRIZ CENTRAL</span>
-                <h2>0 - Dirección General & Clon Evolutivo de Ariana</h2>
-                <div class="commit-line">🔄 Último movimiento: Sincronizado en carpeta local / Drive</div>
-              </div>
-            </div>
-
-            <div class="links-list">
-              <h3>🌐 Links, Sitios y Entregables Vivos (1 Clic para Abrir, Copiar o Mandar por WhatsApp)</h3>
-              
-              <div class="link-item">
-                <div class="link-info">
-                  <div class="link-title">🧬 Panel Vivo del Clon Evolutivo + Tabla de Comandos</div>
-                  <div class="link-meta">Panel Central (Celular / WhatsApp) · <span class="mono">https://alliance-phrases-camcorders-underlying.trycloudflare.com/</span></div>
-                </div>
-                <div class="link-btns">
-                  <a href="https://alliance-phrases-camcorders-underlying.trycloudflare.com/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
-                  <button onclick="copyUrl('https://alliance-phrases-camcorders-underlying.trycloudflare.com/')" class="btn-act btn-copy">📋 Copiar URL</button>
-                  <a href="https://wa.me/?text=🧬 Panel Vivo del Clon Evolutivo + Tabla de Comandos:%20https://alliance-phrases-camcorders-underlying.trycloudflare.com/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
-                </div>
-              </div>
-            
-              <div class="link-item">
-                <div class="link-info">
-                  <div class="link-title">🌐 Linktree General Maestro (Todas las Cuentas)</div>
-                  <div class="link-meta">Hub General en Vivo · <span class="mono">https://alliance-phrases-camcorders-underlying.trycloudflare.com/HUB_GENERAL_ARIANA.html</span></div>
-                </div>
-                <div class="link-btns">
-                  <a href="https://alliance-phrases-camcorders-underlying.trycloudflare.com/HUB_GENERAL_ARIANA.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
-                  <button onclick="copyUrl('https://alliance-phrases-camcorders-underlying.trycloudflare.com/HUB_GENERAL_ARIANA.html')" class="btn-act btn-copy">📋 Copiar URL</button>
-                  <a href="https://wa.me/?text=🌐 Linktree General Maestro (Todas las Cuentas):%20https://alliance-phrases-camcorders-underlying.trycloudflare.com/HUB_GENERAL_ARIANA.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
-                </div>
-              </div>
-            
-            </div>
-
-            <div class="two-cols">
-              <div class="info-box ideas-box">
-                <h4>✍️ Ideas, Copys y Reglas Activas de la Cuenta</h4>
-                <ul><li>Frase Clave Universal: 'Actualizá la memoria de esta cuenta con esto'</li><li>Bajada a especialistas: 1° Objetivo final de negocio, 2° De atrás hacia adelante sin ahogar en detalles</li><li>Regla de Rigor: Maquetar 1 muestra antes de hacer 15 PDFs; datos expuestos (UI/BCU) siempre con fuente oficial y cadencia diaria</li></ul>
-              </div>
-              <div class="info-box pend-box">
-                <h4>⏳ Temas a Desarrollar / Próximos Pasos</h4>
-                <ul><li>Explicar estructura de prompt de 3 pasos cuando Ariana lo pida (mientras corre automática por Regla #8)</li><li>Destilación automática cada 48 hs (Cron activo)</li></ul>
-              </div>
-            </div>
-          </section>
-        
-          <section class="proj-card" id="4-star-union" style="border-top: 5px solid #15803d;">
-            <div class="proj-header">
-              <div>
-                <span class="proj-badge" style="background:#15803d;">4 · B2B ARGENTINA</span>
+                <span class="proj-badge" style="background:#03582d;">4 · B2B ARGENTINA (ACTIVO HOY)</span>
                 <h2>4 - STAR UNION S.R.L. (Limpieza Corporativa e Industrial)</h2>
-                <div class="commit-line">🔄 Último movimiento: 8cd9388 · chore(star-union): update Linktree Central labels and Open Sans typography (28 minutes ago)</div>
+                <div class="commit-line">🔄 Estado: d69684a · Linktree: separar planilla acotada para Mauro de las 2 bases internas completas de Ariana (6 hours ago)</div>
               </div>
             </div>
 
             <div class="links-list">
-              <h3>🌐 Links, Sitios y Entregables Vivos (1 Clic para Abrir, Copiar o Mandar por WhatsApp)</h3>
+              <h3>🌐 Paneles Operativos, Herramientas, Redes y Sitios de esta Cuenta (1 Clic)</h3>
               
               <div class="link-item">
                 <div class="link-info">
-                  <div class="link-title">🌳 Linktree Central de Star Union (/accesos/)</div>
-                  <div class="link-meta">Linktree del Proyecto · <span class="mono">https://wajntraub.ar/staruniontest/accesos/</span></div>
+                  <div class="link-title">🟢 PARA ENVIAR A MAURO HOY: Planilla Unificada WhatsApp + Mail (4 Solapas limpias, sin CVs, sin proveedores y sin links de sistema)</div>
+                  <div class="link-meta">Stakeholders · <span class="mono">https://docs.google.com/spreadsheets/d/1Pl8VOkzIyRo_q4DdWoMNGDOp_eVTmAeDaJuvppWA3oo/edit</span></div>
                 </div>
                 <div class="link-btns">
-                  <a href="https://wajntraub.ar/staruniontest/accesos/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
-                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/accesos/')" class="btn-act btn-copy">📋 Copiar URL</button>
-                  <a href="https://wa.me/?text=🌳 Linktree Central de Star Union (/accesos/):%20https://wajntraub.ar/staruniontest/accesos/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                  <a href="https://docs.google.com/spreadsheets/d/1Pl8VOkzIyRo_q4DdWoMNGDOp_eVTmAeDaJuvppWA3oo/edit" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://docs.google.com/spreadsheets/d/1Pl8VOkzIyRo_q4DdWoMNGDOp_eVTmAeDaJuvppWA3oo/edit')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🟢 PARA ENVIAR A MAURO HOY: Planilla Unificada WhatsApp + Mail (4 Solapas limpias, sin CVs, sin proveedores y sin links de sistema):%20https://docs.google.com/spreadsheets/d/1Pl8VOkzIyRo_q4DdWoMNGDOp_eVTmAeDaJuvppWA3oo/edit" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
                 </div>
               </div>
             
               <div class="link-item">
                 <div class="link-info">
-                  <div class="link-title">📋 Formulario de Relevamiento Gerencial (Para Mauro)</div>
-                  <div class="link-meta">Formulario Interactivo + Pedido Excel Clientes · <span class="mono">https://wajntraub.ar/staruniontest/relevamiento-gerencia/</span></div>
+                  <div class="link-title">🔒 INTERNO ARIANA (Para CRM y Mariel): Base Completa Mails y Web contacto@ (Con CVs día/hora, Proveedores y Links wa.me)</div>
+                  <div class="link-meta">Stakeholders · <span class="mono">https://docs.google.com/spreadsheets/d/14ArFqW5suTTuLFwv6Rdy-MFI72CU4lrdUKYsLH52eBs/edit</span></div>
                 </div>
                 <div class="link-btns">
-                  <a href="https://wajntraub.ar/staruniontest/relevamiento-gerencia/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
-                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/relevamiento-gerencia/')" class="btn-act btn-copy">📋 Copiar URL</button>
-                  <a href="https://wa.me/?text=📋 Formulario de Relevamiento Gerencial (Para Mauro):%20https://wajntraub.ar/staruniontest/relevamiento-gerencia/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                  <a href="https://docs.google.com/spreadsheets/d/14ArFqW5suTTuLFwv6Rdy-MFI72CU4lrdUKYsLH52eBs/edit" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://docs.google.com/spreadsheets/d/14ArFqW5suTTuLFwv6Rdy-MFI72CU4lrdUKYsLH52eBs/edit')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🔒 INTERNO ARIANA (Para CRM y Mariel): Base Completa Mails y Web contacto@ (Con CVs día/hora, Proveedores y Links wa.me):%20https://docs.google.com/spreadsheets/d/14ArFqW5suTTuLFwv6Rdy-MFI72CU4lrdUKYsLH52eBs/edit" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
                 </div>
               </div>
             
               <div class="link-item">
                 <div class="link-info">
-                  <div class="link-title">🎯 Radar Comercial B2B (Cruces Perfit CSV por Dominio)</div>
-                  <div class="link-meta">Herramienta Comercial · <span class="mono">https://wajntraub.ar/staruniontest/radar-comercial/</span></div>
+                  <div class="link-title">🔒 INTERNO ARIANA (Para CRM y Mariel): Base Completa WhatsApp Business (Con 948 Históricos, PDFs y Links wa.me)</div>
+                  <div class="link-meta">Stakeholders · <span class="mono">https://docs.google.com/spreadsheets/d/1vkM3Mlaoz3js_iUxh1IDVlLUsVPsFZ3pYimYxuk26To/edit</span></div>
                 </div>
                 <div class="link-btns">
-                  <a href="https://wajntraub.ar/staruniontest/radar-comercial/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
-                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/radar-comercial/')" class="btn-act btn-copy">📋 Copiar URL</button>
-                  <a href="https://wa.me/?text=🎯 Radar Comercial B2B (Cruces Perfit CSV por Dominio):%20https://wajntraub.ar/staruniontest/radar-comercial/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                  <a href="https://docs.google.com/spreadsheets/d/1vkM3Mlaoz3js_iUxh1IDVlLUsVPsFZ3pYimYxuk26To/edit" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://docs.google.com/spreadsheets/d/1vkM3Mlaoz3js_iUxh1IDVlLUsVPsFZ3pYimYxuk26To/edit')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🔒 INTERNO ARIANA (Para CRM y Mariel): Base Completa WhatsApp Business (Con 948 Históricos, PDFs y Links wa.me):%20https://docs.google.com/spreadsheets/d/1vkM3Mlaoz3js_iUxh1IDVlLUsVPsFZ3pYimYxuk26To/edit" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
                 </div>
               </div>
             
               <div class="link-item">
                 <div class="link-info">
-                  <div class="link-title">🏢 Sitio Público Completo (12 Páginas 100% SEO + GEO + OG)</div>
-                  <div class="link-meta">Sitio Web Institucional · <span class="mono">https://wajntraub.ar/staruniontest/</span></div>
+                  <div class="link-title">📡 Radar Comercial B2B + Las 3 Canastas de WhatsApp Business (948 Históricos + 88 Activos Jul-Nov + 773 Ruido)</div>
+                  <div class="link-meta">Stakeholders · <span class="mono">https://wajntraub.ar/staruniontest/radar-comercial/#canastas-wa</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://wajntraub.ar/staruniontest/radar-comercial/#canastas-wa" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/radar-comercial/#canastas-wa')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📡 Radar Comercial B2B + Las 3 Canastas de WhatsApp Business (948 Históricos + 88 Activos Jul-Nov + 773 Ruido):%20https://wajntraub.ar/staruniontest/radar-comercial/#canastas-wa" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🟢 HOY PARA MANDAR A APROBAR A MAURO (Limpio sin barras): PDF Final Limpieza de Fábricas (Versión Colores Carátula + 38 links vivos)</div>
+                  <div class="link-meta">📂 Brochures & Dossier · <span class="mono">https://wajntraub.ar/staruniontest/brochures/pdf/brochure-fabricas-e-industrias-version-b.pdf</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://wajntraub.ar/staruniontest/brochures/pdf/brochure-fabricas-e-industrias-version-b.pdf" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/brochures/pdf/brochure-fabricas-e-industrias-version-b.pdf')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🟢 HOY PARA MANDAR A APROBAR A MAURO (Limpio sin barras): PDF Final Limpieza de Fábricas (Versión Colores Carátula + 38 links vivos):%20https://wajntraub.ar/staruniontest/brochures/pdf/brochure-fabricas-e-industrias-version-b.pdf" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">✏️ TU EDITOR PRIVADO (PASO 1 · Versión Colores con llave ?edit=1 solo para Ariana)</div>
+                  <div class="link-meta">📂 Brochures & Dossier · <span class="mono">https://wajntraub.ar/staruniontest/brochures/editables/brochure-fabricas-e-industrias-version-b.html?edit=1</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://wajntraub.ar/staruniontest/brochures/editables/brochure-fabricas-e-industrias-version-b.html?edit=1" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/brochures/editables/brochure-fabricas-e-industrias-version-b.html?edit=1')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=✏️ TU EDITOR PRIVADO (PASO 1 · Versión Colores con llave ?edit=1 solo para Ariana):%20https://wajntraub.ar/staruniontest/brochures/editables/brochure-fabricas-e-industrias-version-b.html?edit=1" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📄 PASO 2 PARA ELLOS (Limpio sin barras): PDF Blanco Liviano · Ficha de Protocolo Técnico / Eco-Print de Oficina</div>
+                  <div class="link-meta">📂 Brochures & Dossier · <span class="mono">https://wajntraub.ar/staruniontest/brochures/pdf/brochure-fabricas-e-industrias.pdf</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://wajntraub.ar/staruniontest/brochures/pdf/brochure-fabricas-e-industrias.pdf" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/brochures/pdf/brochure-fabricas-e-industrias.pdf')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📄 PASO 2 PARA ELLOS (Limpio sin barras): PDF Blanco Liviano · Ficha de Protocolo Técnico / Eco-Print de Oficina:%20https://wajntraub.ar/staruniontest/brochures/pdf/brochure-fabricas-e-industrias.pdf" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">✏️ TU EDITOR PRIVADO (PASO 2 · Versión Blanca Liviana con llave ?edit=1 solo para Ariana)</div>
+                  <div class="link-meta">📂 Brochures & Dossier · <span class="mono">https://wajntraub.ar/staruniontest/brochures/editables/brochure-fabricas-e-industrias.html?edit=1</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://wajntraub.ar/staruniontest/brochures/editables/brochure-fabricas-e-industrias.html?edit=1" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/brochures/editables/brochure-fabricas-e-industrias.html?edit=1')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=✏️ TU EDITOR PRIVADO (PASO 2 · Versión Blanca Liviana con llave ?edit=1 solo para Ariana):%20https://wajntraub.ar/staruniontest/brochures/editables/brochure-fabricas-e-industrias.html?edit=1" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🌐 PASO 3 PARA ELLOS / CLIENTES (Limpio sin Centro de Control): Brochure Interactivo Online abierto en Fábricas</div>
+                  <div class="link-meta">📂 Brochures & Dossier · <span class="mono">https://wajntraub.ar/staruniontest/dossier/index.html?vertical=fabricas</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://wajntraub.ar/staruniontest/dossier/index.html?vertical=fabricas" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/dossier/index.html?vertical=fabricas')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🌐 PASO 3 PARA ELLOS / CLIENTES (Limpio sin Centro de Control): Brochure Interactivo Online abierto en Fábricas:%20https://wajntraub.ar/staruniontest/dossier/index.html?vertical=fabricas" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🛠️ MODO CONTROL INTERNO DEL INTERACTIVO (Con botón para copiar el link limpio de cada uno de los 8 rubros)</div>
+                  <div class="link-meta">📂 Brochures & Dossier · <span class="mono">https://wajntraub.ar/staruniontest/dossier/index.html?modo=control</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://wajntraub.ar/staruniontest/dossier/index.html?modo=control" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/dossier/index.html?modo=control')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🛠️ MODO CONTROL INTERNO DEL INTERACTIVO (Con botón para copiar el link limpio de cada uno de los 8 rubros):%20https://wajntraub.ar/staruniontest/dossier/index.html?modo=control" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📋 Linktree General de Star Union (Con el Apartado Completo de Brochures Paso 1, 2 y 3)</div>
+                  <div class="link-meta">Panel Central · <span class="mono">https://wajntraub.ar/staruniontest/accesos/#apartado-brochures</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://wajntraub.ar/staruniontest/accesos/#apartado-brochures" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/accesos/#apartado-brochures')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📋 Linktree General de Star Union (Con el Apartado Completo de Brochures Paso 1, 2 y 3):%20https://wajntraub.ar/staruniontest/accesos/#apartado-brochures" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📧 Propuesta de Embudo B2B (Funnel 1) + Comparador Plantillas Mailing HTML A y B (Perfit API)</div>
+                  <div class="link-meta">Perfit & Fotos · <span class="mono">https://wajntraub.ar/staruniontest/redes-sociales/embudo-y-comparador-mailing-ab.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://wajntraub.ar/staruniontest/redes-sociales/embudo-y-comparador-mailing-ab.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/redes-sociales/embudo-y-comparador-mailing-ab.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📧 Propuesta de Embudo B2B (Funnel 1) + Comparador Plantillas Mailing HTML A y B (Perfit API):%20https://wajntraub.ar/staruniontest/redes-sociales/embudo-y-comparador-mailing-ab.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📲 Central de Redes Sociales + 3 Videos MP4 con Fotos Reales y Música + 3 Bases Canva (.PPTX/.SVG)</div>
+                  <div class="link-meta">Redes & Videos · <span class="mono">https://wajntraub.ar/staruniontest/redes-sociales/</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://wajntraub.ar/staruniontest/redes-sociales/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/redes-sociales/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📲 Central de Redes Sociales + 3 Videos MP4 con Fotos Reales y Música + 3 Bases Canva (.PPTX/.SVG):%20https://wajntraub.ar/staruniontest/redes-sociales/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🎬 Reel Dinámico 5 Escenas con Fotos Reales y Música (.MP4 directo 1080x1920)</div>
+                  <div class="link-meta">Redes & Videos · <span class="mono">https://wajntraub.ar/staruniontest/redes-sociales/piezas/REEL_5_ESCENAS_DINAMICO_15SEG.mp4</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://wajntraub.ar/staruniontest/redes-sociales/piezas/REEL_5_ESCENAS_DINAMICO_15SEG.mp4" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/redes-sociales/piezas/REEL_5_ESCENAS_DINAMICO_15SEG.mp4')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🎬 Reel Dinámico 5 Escenas con Fotos Reales y Música (.MP4 directo 1080x1920):%20https://wajntraub.ar/staruniontest/redes-sociales/piezas/REEL_5_ESCENAS_DINAMICO_15SEG.mp4" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🏅 Certificado Oficial ISO 9001:2015 TÜV Rheinland (PDF Descargable)</div>
+                  <div class="link-meta">📂 Brochures & Dossier · <span class="mono">https://wajntraub.ar/staruniontest/assets/certificados/Certificado-ISO-9001-Star-Union-2025.pdf</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://wajntraub.ar/staruniontest/assets/certificados/Certificado-ISO-9001-Star-Union-2025.pdf" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/assets/certificados/Certificado-ISO-9001-Star-Union-2025.pdf')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🏅 Certificado Oficial ISO 9001:2015 TÜV Rheinland (PDF Descargable):%20https://wajntraub.ar/staruniontest/assets/certificados/Certificado-ISO-9001-Star-Union-2025.pdf" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🏠 Sitio Web Público Unificado (10 Páginas con Fotos Perfit Curadas)</div>
+                  <div class="link-meta">Sitio Público · <span class="mono">https://wajntraub.ar/staruniontest/</span></div>
                 </div>
                 <div class="link-btns">
                   <a href="https://wajntraub.ar/staruniontest/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
                   <button onclick="copyUrl('https://wajntraub.ar/staruniontest/')" class="btn-act btn-copy">📋 Copiar URL</button>
-                  <a href="https://wa.me/?text=🏢 Sitio Público Completo (12 Páginas 100% SEO + GEO + OG):%20https://wajntraub.ar/staruniontest/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                  <a href="https://wa.me/?text=🏠 Sitio Web Público Unificado (10 Páginas con Fotos Perfit Curadas):%20https://wajntraub.ar/staruniontest/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
                 </div>
               </div>
             
               <div class="link-item">
                 <div class="link-info">
-                  <div class="link-title">📑 Hub de 16 Brochures PDF + Editor con Deshacer</div>
-                  <div class="link-meta">Material Comercial B2B · <span class="mono">https://wajntraub.ar/staruniontest/brochures/</span></div>
+                  <div class="link-title">📧 Inteligencia Histórica Perfit (21 Campañas + 21 Fotos Curadas HD)</div>
+                  <div class="link-meta">Perfit & Fotos · <span class="mono">https://wajntraub.ar/staruniontest/radar-comercial/perfit-historial/</span></div>
                 </div>
                 <div class="link-btns">
-                  <a href="https://wajntraub.ar/staruniontest/brochures/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
-                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/brochures/')" class="btn-act btn-copy">📋 Copiar URL</button>
-                  <a href="https://wa.me/?text=📑 Hub de 16 Brochures PDF + Editor con Deshacer:%20https://wajntraub.ar/staruniontest/brochures/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                  <a href="https://wajntraub.ar/staruniontest/radar-comercial/perfit-historial/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/radar-comercial/perfit-historial/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📧 Inteligencia Histórica Perfit (21 Campañas + 21 Fotos Curadas HD):%20https://wajntraub.ar/staruniontest/radar-comercial/perfit-historial/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
                 </div>
               </div>
             
               <div class="link-item">
                 <div class="link-info">
-                  <div class="link-title">📘 Dossier Corporativo Interactivo</div>
-                  <div class="link-meta">Presentación Ejecutiva · <span class="mono">https://wajntraub.ar/staruniontest/dossier/</span></div>
+                  <div class="link-title">✅ Formulario de Relevamiento para Mauro (Ranking 1° a 6°)</div>
+                  <div class="link-meta">Stakeholders · <span class="mono">https://wajntraub.ar/staruniontest/relevamiento-gerencia/</span></div>
                 </div>
                 <div class="link-btns">
-                  <a href="https://wajntraub.ar/staruniontest/dossier/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
-                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/dossier/')" class="btn-act btn-copy">📋 Copiar URL</button>
-                  <a href="https://wa.me/?text=📘 Dossier Corporativo Interactivo:%20https://wajntraub.ar/staruniontest/dossier/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                  <a href="https://wajntraub.ar/staruniontest/relevamiento-gerencia/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/relevamiento-gerencia/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=✅ Formulario de Relevamiento para Mauro (Ranking 1° a 6°):%20https://wajntraub.ar/staruniontest/relevamiento-gerencia/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
                 </div>
               </div>
             
               <div class="link-item">
                 <div class="link-info">
-                  <div class="link-title">📧 Pieza Mailing Perfit #119 (Octubre 26 Reenvío)</div>
-                  <div class="link-meta">Historial Perfit (Fotos Recortadas + Métricas) · <span class="mono">https://online-versions-prod.s3.amazonaws.com/starunionsrl/starunionsrl_bulk_119/dsvfth_7535c9</span></div>
+                  <div class="link-title">📊 Orden de Trabajo Completa para Mariel (Google Ads + Negativas)</div>
+                  <div class="link-meta">Google Ads · <span class="mono">https://wajntraub.ar/staruniontest/acuerdos/</span></div>
                 </div>
                 <div class="link-btns">
-                  <a href="https://online-versions-prod.s3.amazonaws.com/starunionsrl/starunionsrl_bulk_119/dsvfth_7535c9" target="_blank" class="btn-act btn-open">👉 Abrir</a>
-                  <button onclick="copyUrl('https://online-versions-prod.s3.amazonaws.com/starunionsrl/starunionsrl_bulk_119/dsvfth_7535c9')" class="btn-act btn-copy">📋 Copiar URL</button>
-                  <a href="https://wa.me/?text=📧 Pieza Mailing Perfit #119 (Octubre 26 Reenvío):%20https://online-versions-prod.s3.amazonaws.com/starunionsrl/starunionsrl_bulk_119/dsvfth_7535c9" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                  <a href="https://wajntraub.ar/staruniontest/acuerdos/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://wajntraub.ar/staruniontest/acuerdos/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📊 Orden de Trabajo Completa para Mariel (Google Ads + Negativas):%20https://wajntraub.ar/staruniontest/acuerdos/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📲 Calendario Cronológico + 3 Bases Editables Canva (.PPTX/.PDF con Márgenes Seguros) + 10 Piezas + 2 Shorts MP4</div>
+                  <div class="link-meta">Central de Redes Sociales y YouTube Shorts · <span class="mono">http://127.0.0.1:8894/redes-sociales/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8894/redes-sociales/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8894/redes-sociales/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📲 Calendario Cronológico + 3 Bases Editables Canva (.PPTX/.PDF con Márgenes Seguros) + 10 Piezas + 2 Shorts MP4:%20http://127.0.0.1:8894/redes-sociales/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📧 Informe Estratégico 21 Campañas Perfit + Embudo 3 Carriles + Calendario + 21 Fotos Curadas HD</div>
+                  <div class="link-meta">Inteligencia de Mailing B2B (Mismo archivo del Chat SU) · <span class="mono">http://127.0.0.1:8894/radar-comercial/perfit-historial/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8894/radar-comercial/perfit-historial/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8894/radar-comercial/perfit-historial/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📧 Informe Estratégico 21 Campañas Perfit + Embudo 3 Carriles + Calendario + 21 Fotos Curadas HD:%20http://127.0.0.1:8894/radar-comercial/perfit-historial/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🌳 Linktree Central de Star Union (/accesos/)</div>
+                  <div class="link-meta">Todos los Accesos del Proyecto · <span class="mono">http://127.0.0.1:8894/accesos/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8894/accesos/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8894/accesos/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🌳 Linktree Central de Star Union (/accesos/):%20http://127.0.0.1:8894/accesos/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">✅ Formulario de Relevamiento para Mauro (Ranking 1° a 6° + Corte Mínimo + Pedido Lista Clientes)</div>
+                  <div class="link-meta">Relevamiento Gerencia · <span class="mono">http://127.0.0.1:8894/relevamiento-gerencia/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8894/relevamiento-gerencia/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8894/relevamiento-gerencia/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=✅ Formulario de Relevamiento para Mauro (Ranking 1° a 6° + Corte Mínimo + Pedido Lista Clientes):%20http://127.0.0.1:8894/relevamiento-gerencia/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📊 Orden de Trabajo Completa para Mariel (Google Ads 34 Keywords + Tabla de Negativas + Conversión B2B)</div>
+                  <div class="link-meta">Pauta Google Ads (Cuenta 4477242318) · <span class="mono">http://127.0.0.1:8894/acuerdos/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8894/acuerdos/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8894/acuerdos/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📊 Orden de Trabajo Completa para Mariel (Google Ads 34 Keywords + Tabla de Negativas + Conversión B2B):%20http://127.0.0.1:8894/acuerdos/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📚 Centro de 16 Brochures PDF Desapelmazados + Editor de Textos en Vivo (Con Deshacer)</div>
+                  <div class="link-meta">Biblioteca Comercial B2B · <span class="mono">http://127.0.0.1:8894/brochures/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8894/brochures/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8894/brochures/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📚 Centro de 16 Brochures PDF Desapelmazados + Editor de Textos en Vivo (Con Deshacer):%20http://127.0.0.1:8894/brochures/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📘 Dossier Ejecutivo Interactivo B2B (Sin botones de edición · Para enviar a clientes)</div>
+                  <div class="link-meta">Presentación Comercial · <span class="mono">http://127.0.0.1:8894/dossier/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8894/dossier/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8894/dossier/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📘 Dossier Ejecutivo Interactivo B2B (Sin botones de edición · Para enviar a clientes):%20http://127.0.0.1:8894/dossier/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🏢 Sitio Web Público Unificado (10 Páginas con Fotos Perfit Curadas + SEO/GEO/OG)</div>
+                  <div class="link-meta">Sitio Web (Local Viva / Staging wajntraub.ar/staruniontest) · <span class="mono">http://127.0.0.1:8894/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8894/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8894/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🏢 Sitio Web Público Unificado (10 Páginas con Fotos Perfit Curadas + SEO/GEO/OG):%20http://127.0.0.1:8894/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">⏸️ Radar Comercial B2B (EN ESPERA: usar recién con Sitio + Brochures + Lista Clientes cruzada)</div>
+                  <div class="link-meta">Herramienta Reservada · <span class="mono">http://127.0.0.1:8894/radar-comercial/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8894/radar-comercial/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8894/radar-comercial/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=⏸️ Radar Comercial B2B (EN ESPERA: usar recién con Sitio + Brochures + Lista Clientes cruzada):%20http://127.0.0.1:8894/radar-comercial/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
                 </div>
               </div>
             
@@ -341,49 +624,154 @@
 
             <div class="two-cols">
               <div class="info-box ideas-box">
-                <h4>✍️ Ideas, Copys y Reglas Activas de la Cuenta</h4>
-                <ul><li>Estética Mauro: Blanco puro dominante, cero azul/naranja kermés, sin efecto bandera de Brasil, dirección Guaminí 5657 CABA</li><li>Cleany refinada: Solo en Capacitaciones/ISO (gorrita egreso) y cápsulas técnicas 'El Check Técnico de Cleany'</li><li>Bifurcador pre-WhatsApp: Separar empresas que cotizan vs. postulantes que buscan empleo (para no ensuciar conversiones de Mariel en Google Ads)</li></ul>
+                <div class="box-head">
+                  <h4>✍️ Criterios Cerrados, Reglas e Ideas Activas (Editable con 1 clic)</h4>
+                </div>
+                <ul id="ideas-4-star-union" class="ideas-ul"><li contenteditable="true" onblur="saveState()">3 Bases Maestras en Canva (en Mi unidad/su para AG/REDES_SOCIALES_Y_SHORTS_2026/3_BASES_MAESTRAS_CANVA): 1) Reel 1080×1920 (250px arriba, 420px abajo, 140px der), 2) FB/IG 1080×1350 (145px arriba/abajo para grilla 1:1), 3) LinkedIn 1200×1200. Se les pone la música una sola vez en Canva y se duplican siempre.</li><li contenteditable="true" onblur="saveState()">Regla de URLs Hoy vs. En 2 Semanas: Hoy los copies llevan www.starunion.com.ar + WhatsApp (+54 9 11 2275-9369). Cuando se suba el sitio nuevo, pasan a las 8 sub-rutas (/limpieza-industrial/, /clinicas-y-hospitales/, etc.).</li><li contenteditable="true" onblur="saveState()">Perfit: 1 sola campaña mensual + 1 reenvío a los 5 días a no-abridores cambiando el Asunto ('Empresa de Limpieza Profesional · ...', que en Septiembre #117 dio +136% clics). Tildar 'Seguimiento con Google Analytics' y completar Preheader.</li><li contenteditable="true" onblur="saveState()">Cronología exacta de sedes: Fundada en 2001 -> Sede histórica calle Pergamino -> Actual Base Operativa Propia de 800 m² (3 niveles) en Guaminí 5052/5657 CABA (con Taller Propio desde fines de 2010).</li></ul>
+                <div class="add-row">
+                  <input type="text" id="input-idea-4-star-union" placeholder="+ Sumar regla o idea a esta cuenta..." onkeydown="if(event.key==='Enter') addIdea('4-star-union')" />
+                  <button onclick="addIdea('4-star-union')">+ Agregar</button>
+                </div>
               </div>
+
               <div class="info-box pend-box">
-                <h4>⏳ Temas a Desarrollar / Próximos Pasos</h4>
-                <ul><li>Circuito De Atrás hacia Adelante: 1) Recibir Excel de clientes reales de Mauro, 2) Extraer @dominios actuales, 3) Cruzar con CSV de últimos clics de Perfit y excluir clientes actuales antes de escribirles</li><li>Sumar links /shares/ de meses anteriores de Perfit para usar todas las fotos ya recortadas del CDN y reemplazar fotos con doble logo en la web</li><li>Sumar verticales Aeropuertos, Shoppings y Concesionarios con protagonismo propio</li></ul>
+                <div class="box-head">
+                  <h4>⏳ Checklist de Pendientes y Próximos Pasos (Tildá o editá en vivo)</h4>
+                </div>
+                <ul id="pend-4-star-union" class="pend-ul"><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Subir las 3 Bases Maestras (.PPTX) a Canva, ponerles la música institucional de Star Union una vez y dejarlas fijas como matriz.</span>
+                </li><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Recibir respuestas de Mauro en /relevamiento-gerencia/ (Ranking 1° a 6°, corte mínimo, rubros en Bahía Blanca/Neuquén/Trelew y Lista de Clientes actuales e históricos).</span>
+                </li><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Cruzar Lista de Clientes de Mauro contra la base de clics de Perfit (para excluir clientes actuales) ANTES de activar el Radar Comercial B2B.</span>
+                </li><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Enviar la Orden de Trabajo (/acuerdos/) a Mariel para cargar la Tabla Maestra de Palabras Clave Negativas y pasar la conversión primaria al Formulario B2B.</span>
+                </li><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Subir el Sitio Web Nuevo definitivo al dominio www.starunion.com.ar y cambiar los links de redes y Perfit a las URLs por vertical.</span>
+                </li></ul>
+                <div class="add-row">
+                  <input type="text" id="input-pend-4-star-union" placeholder="+ Sumar pendiente o tarea a esta cuenta..." onkeydown="if(event.key==='Enter') addPend('4-star-union')" />
+                  <button onclick="addPend('4-star-union')">+ Agregar</button>
+                </div>
               </div>
+            </div>
+
+            <div class="notes-area">
+              <label>🧠 Pizarrón libre para pensar esta cuenta (se guarda solo en tu navegador):</label>
+              <textarea id="notes-4-star-union" oninput="saveState()" placeholder="Escribí acá borradores, dudas, cosas para pedirle a Mauro / Fabricio / Eliezer o lo que quieras destrabar en esta cuenta..."></textarea>
             </div>
           </section>
         
-          <section class="proj-card" id="1-zaguan" style="border-top: 5px solid #0f172a;">
+          <section class="proj-card" id="1-zaguan" data-proj="1-zaguan" style="border-top: 6px solid #0f172a;">
             <div class="proj-header">
               <div>
-                <span class="proj-badge" style="background:#0f172a;">1 · REAL ESTATE PDE</span>
-                <h2>1 - ZAGUÁN (Inmobiliaria & Desarrollos Punta del Este)</h2>
-                <div class="commit-line">🔄 Último movimiento: Sincronizado en carpeta local / Drive</div>
+                <span class="proj-badge" style="background:#0f172a;">1 · REAL ESTATE PUNTA DEL ESTE</span>
+                <h2>1 - ZAGUÁN PROPIEDADES (Cabina Operativa, CRM Desarrolladoras, Canva Kit y Sitio)</h2>
+                <div class="commit-line">🔄 Estado: 9af6144 · fix(zaguan): remove Montevideo agencies, enforce EVE Tower Desde USD 150.000 and official developer pipeline in /admin (2 days ago)</div>
               </div>
             </div>
 
             <div class="links-list">
-              <h3>🌐 Links, Sitios y Entregables Vivos (1 Clic para Abrir, Copiar o Mandar por WhatsApp)</h3>
+              <h3>🌐 Paneles Operativos, Herramientas, Redes y Sitios de esta Cuenta (1 Clic)</h3>
               
               <div class="link-item">
                 <div class="link-info">
-                  <div class="link-title">🏛️ Sitio Web Zaguán Propiedades (Producción)</div>
-                  <div class="link-meta">Sitio Web Principal · <span class="mono">https://zaguanpropiedades.com/</span></div>
+                  <div class="link-title">🎛️ Cabina Operativa Zaguán (MI_PANEL_ZAGUAN.html · Canva Kit + WhatsApp + Arquitectura de Pauta y Benchmark)</div>
+                  <div class="link-meta">Panel de Control y Redes de Zaguán · <span class="mono">http://127.0.0.1:8080/MI_PANEL_ZAGUAN.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8080/MI_PANEL_ZAGUAN.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8080/MI_PANEL_ZAGUAN.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🎛️ Cabina Operativa Zaguán (MI_PANEL_ZAGUAN.html · Canva Kit + WhatsApp + Arquitectura de Pauta y Benchmark):%20http://127.0.0.1:8080/MI_PANEL_ZAGUAN.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🎯 Tracker Comercial / CRM de 14 Desarrolladoras + Relojes de Protección Altius (60 / 90 / 120 días)</div>
+                  <div class="link-meta">CRM y Prospección B2B (/prospecting/) · <span class="mono">http://127.0.0.1:8080/prospecting/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8080/prospecting/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8080/prospecting/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🎯 Tracker Comercial / CRM de 14 Desarrolladoras + Relojes de Protección Altius (60 / 90 / 120 días):%20http://127.0.0.1:8080/prospecting/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🌳 Linktree de Accesos de Zaguán (/links/)</div>
+                  <div class="link-meta">Linktree del Proyecto · <span class="mono">http://127.0.0.1:8080/links/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8080/links/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8080/links/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🌳 Linktree de Accesos de Zaguán (/links/):%20http://127.0.0.1:8080/links/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🧭 Selector de Landings (/landingselector/) + 📱 Generador de QR (/generadorqr/)</div>
+                  <div class="link-meta">Herramientas Comerciales · <span class="mono">http://127.0.0.1:8080/landingselector/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8080/landingselector/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8080/landingselector/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🧭 Selector de Landings (/landingselector/) + 📱 Generador de QR (/generadorqr/):%20http://127.0.0.1:8080/landingselector/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📰 Blog SEO / 11 Notas 'Novedades del Este' (Betania IV, EVE Tower, Golden Rise, Compra en Pozo)</div>
+                  <div class="link-meta">Contenido SEO / GEO (/novedades-del-este/) · <span class="mono">http://127.0.0.1:8080/novedades-del-este/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8080/novedades-del-este/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8080/novedades-del-este/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📰 Blog SEO / 11 Notas 'Novedades del Este' (Betania IV, EVE Tower, Golden Rise, Compra en Pozo):%20http://127.0.0.1:8080/novedades-del-este/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🏢 Fichas de Proyectos y Tipologías (Betania IV · EVE Tower · Golden Rise)</div>
+                  <div class="link-meta">Catálogo Sincronizado (/proyectos/) · <span class="mono">http://127.0.0.1:8080/proyectos/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8080/proyectos/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8080/proyectos/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🏢 Fichas de Proyectos y Tipologías (Betania IV · EVE Tower · Golden Rise):%20http://127.0.0.1:8080/proyectos/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🪪 Tarjeta Extendida Ariana Wajntraub (/tarjetaEXTENDIDAAW/) + Canal WhatsApp (/whatsapp/)</div>
+                  <div class="link-meta">Tarjeta Digital y Captación · <span class="mono">http://127.0.0.1:8080/tarjetaEXTENDIDAAW/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8080/tarjetaEXTENDIDAAW/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8080/tarjetaEXTENDIDAAW/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🪪 Tarjeta Extendida Ariana Wajntraub (/tarjetaEXTENDIDAAW/) + Canal WhatsApp (/whatsapp/):%20http://127.0.0.1:8080/tarjetaEXTENDIDAAW/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🏛️ Sitio Web Zaguán Propiedades en Producción (zaguanpropiedades.com)</div>
+                  <div class="link-meta">Dominio Público Activo · <span class="mono">https://zaguanpropiedades.com/</span></div>
                 </div>
                 <div class="link-btns">
                   <a href="https://zaguanpropiedades.com/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
                   <button onclick="copyUrl('https://zaguanpropiedades.com/')" class="btn-act btn-copy">📋 Copiar URL</button>
-                  <a href="https://wa.me/?text=🏛️ Sitio Web Zaguán Propiedades (Producción):%20https://zaguanpropiedades.com/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
-                </div>
-              </div>
-            
-              <div class="link-item">
-                <div class="link-info">
-                  <div class="link-title">🏢 Fichas de Emprendimientos (Betania IV, Eve Tower, Golden Rise)</div>
-                  <div class="link-meta">Catálogo de Proyectos · <span class="mono">https://zaguanpropiedades.com/novedades-del-este/</span></div>
-                </div>
-                <div class="link-btns">
-                  <a href="https://zaguanpropiedades.com/novedades-del-este/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
-                  <button onclick="copyUrl('https://zaguanpropiedades.com/novedades-del-este/')" class="btn-act btn-copy">📋 Copiar URL</button>
-                  <a href="https://wa.me/?text=🏢 Fichas de Emprendimientos (Betania IV, Eve Tower, Golden Rise):%20https://zaguanpropiedades.com/novedades-del-este/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                  <a href="https://wa.me/?text=🏛️ Sitio Web Zaguán Propiedades en Producción (zaguanpropiedades.com):%20https://zaguanpropiedades.com/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
                 </div>
               </div>
             
@@ -391,37 +779,223 @@
 
             <div class="two-cols">
               <div class="info-box ideas-box">
-                <h4>✍️ Ideas, Copys y Reglas Activas de la Cuenta</h4>
-                <ul><li>Curaduría arquitectónica, valor por m² real e inversión patrimonial en Punta del Este</li><li>Jerarquía de fichas: Ley de Vivienda Promovida (10 años exoneración impositiva) separada de Proyectos de Pozo y Costaneros</li></ul>
+                <div class="box-head">
+                  <h4>✍️ Criterios Cerrados, Reglas e Ideas Activas (Editable con 1 clic)</h4>
+                </div>
+                <ul id="ideas-1-zaguan" class="ideas-ul"><li contenteditable="true" onblur="saveState()">Regla Golden Rise: Precio estrictamente bajo modalidad 'Consultar precio' (show_price_public: false) y cero mención pública al nombre de la desarrolladora.</li><li contenteditable="true" onblur="saveState()">Regla Betania IV: Términos de financiación (BHU, MVOT, UI, Ley 18.795) en cuarentena hasta validación formal; datos en Unidades Indexadas (UI) siempre con fuente oficial BCU/INE y aclaración de cadencia diaria.</li><li contenteditable="true" onblur="saveState()">Regla de Copy Zaguán (lint_copys.py): Cero adverbios terminados en '-mente', cero negaciones por contraste ('no vendemos humo, sino...') y nombres propios bien escritos.</li><li contenteditable="true" onblur="saveState()">Fábrica de Piezas (mk3_macos.py + CANVA_BULK_11_NOTAS_ZAGUAN.csv): Zona segura unificada [90, 260] a [930, 1540] con audio institucional y logo oficial.</li></ul>
+                <div class="add-row">
+                  <input type="text" id="input-idea-1-zaguan" placeholder="+ Sumar regla o idea a esta cuenta..." onkeydown="if(event.key==='Enter') addIdea('1-zaguan')" />
+                  <button onclick="addIdea('1-zaguan')">+ Agregar</button>
+                </div>
               </div>
+
               <div class="info-box pend-box">
-                <h4>⏳ Temas a Desarrollar / Próximos Pasos</h4>
-                <ul><li>Bloque de Unidades Indexadas (UI) y leyes para extranjeros: conectar únicamente a fuente oficial fidedigna (BCU / INE) aclarando cadencia de actualización diaria antes de publicar</li><li>Auditar fotos completas de Eve Tower y ficha técnica de Golden Rise</li></ul>
+                <div class="box-head">
+                  <h4>⏳ Checklist de Pendientes y Próximos Pasos (Tildá o editá en vivo)</h4>
+                </div>
+                <ul id="pend-1-zaguan" class="pend-ul"><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Armar las 3 Bases Maestras Editables en Canva para Zaguán con el mismo sistema de márgenes seguros y música fija que acabamos de dejar en Star Union.</span>
+                </li><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Confirmar con desarrolladora los precios públicos de Golden Rise antes de levantar el bloqueo show_price_public: false.</span>
+                </li><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Validar condiciones definitivas de financiación de Betania IV (ver docs/betania-iv-condiciones-pendientes.md) antes de publicarlas en fichas.</span>
+                </li><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Mantener actualizados los relojes de protección de leads en el CRM (/prospecting/index.html · Altius 60/90/120 días) a medida que entran consultas.</span>
+                </li></ul>
+                <div class="add-row">
+                  <input type="text" id="input-pend-1-zaguan" placeholder="+ Sumar pendiente o tarea a esta cuenta..." onkeydown="if(event.key==='Enter') addPend('1-zaguan')" />
+                  <button onclick="addPend('1-zaguan')">+ Agregar</button>
+                </div>
               </div>
+            </div>
+
+            <div class="notes-area">
+              <label>🧠 Pizarrón libre para pensar esta cuenta (se guarda solo en tu navegador):</label>
+              <textarea id="notes-1-zaguan" oninput="saveState()" placeholder="Escribí acá borradores, dudas, cosas para pedirle a Mauro / Fabricio / Eliezer o lo que quieras destrabar en esta cuenta..."></textarea>
             </div>
           </section>
         
-          <section class="proj-card" id="2-fabricio" style="border-top: 5px solid #1e3a8a;">
+          <section class="proj-card" id="2-fabricio" data-proj="2-fabricio" style="border-top: 6px solid #504602;">
             <div class="proj-header">
               <div>
-                <span class="proj-badge" style="background:#1e3a8a;">2 · LEGAL & NOTARIAL UY</span>
-                <h2>2 - FABRICIO RIVAS (Escribano en Punta del Este / Maldonado)</h2>
-                <div class="commit-line">🔄 Último movimiento: 0b9508c · Initial commit (3 days ago)</div>
+                <span class="proj-badge" style="background:#504602;">2 · LEGAL & NOTARIAL URUGUAY</span>
+                <h2>2 - FABRICIO RIVAS (Escribano Público · Punta del Este y Maldonado)</h2>
+                <div class="commit-line">🔄 Estado: 0b9508c · Initial commit (13 days ago)</div>
               </div>
             </div>
 
             <div class="links-list">
-              <h3>🌐 Links, Sitios y Entregables Vivos (1 Clic para Abrir, Copiar o Mandar por WhatsApp)</h3>
+              <h3>🌐 Paneles Operativos, Herramientas, Redes y Sitios de esta Cuenta (1 Clic)</h3>
               
               <div class="link-item">
                 <div class="link-info">
-                  <div class="link-title">⚖️ Sitio Web Escribano Fabricio Rivas</div>
-                  <div class="link-meta">Sitio Web + Blog SEO/GEO · <span class="mono">https://fabriciorivas.com/</span></div>
+                  <div class="link-title">🆕 Guía Viva en Producción: Certificado Notarial de Ingresos (Migraciones, Independientes y Bancos)</div>
+                  <div class="link-meta">Sitio Web · <span class="mono">https://escribanofabriciorivas.com/certificado-de-ingresos-maldonado/</span></div>
                 </div>
                 <div class="link-btns">
-                  <a href="https://fabriciorivas.com/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
-                  <button onclick="copyUrl('https://fabriciorivas.com/')" class="btn-act btn-copy">📋 Copiar URL</button>
-                  <a href="https://wa.me/?text=⚖️ Sitio Web Escribano Fabricio Rivas:%20https://fabriciorivas.com/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                  <a href="https://escribanofabriciorivas.com/certificado-de-ingresos-maldonado/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://escribanofabriciorivas.com/certificado-de-ingresos-maldonado/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🆕 Guía Viva en Producción: Certificado Notarial de Ingresos (Migraciones, Independientes y Bancos):%20https://escribanofabriciorivas.com/certificado-de-ingresos-maldonado/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">✅ Aprobalo — Link Directo del Cliente (Fabricio Rivas · 5 Piezas Ya en Estado 'En el cliente')</div>
+                  <div class="link-meta">Aprobalo · <span class="mono">https://aprobala-app.943ari.workers.dev/p/sTE2BTw-JeoZQBXYVICB4EvYG1LwiT7L</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://aprobala-app.943ari.workers.dev/p/sTE2BTw-JeoZQBXYVICB4EvYG1LwiT7L" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://aprobala-app.943ari.workers.dev/p/sTE2BTw-JeoZQBXYVICB4EvYG1LwiT7L')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=✅ Aprobalo — Link Directo del Cliente (Fabricio Rivas · 5 Piezas Ya en Estado 'En el cliente'):%20https://aprobala-app.943ari.workers.dev/p/sTE2BTw-JeoZQBXYVICB4EvYG1LwiT7L" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🏠 Home Actualizada con Banda de Certificados en el Día y Menú Certificados (Local Viva)</div>
+                  <div class="link-meta">Sitio Web · <span class="mono">http://localhost:8092/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://localhost:8092/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://localhost:8092/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🏠 Home Actualizada con Banda de Certificados en el Día y Menú Certificados (Local Viva):%20http://localhost:8092/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📜 Landing Certificados Notariales y Firmas en el Día (Cluster 6 Certificados · Local Viva)</div>
+                  <div class="link-meta">Sitio Web · <span class="mono">http://localhost:8092/certificar-firma-punta-del-este.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://localhost:8092/certificar-firma-punta-del-este.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://localhost:8092/certificar-firma-punta-del-este.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📜 Landing Certificados Notariales y Firmas en el Día (Cluster 6 Certificados · Local Viva):%20http://localhost:8092/certificar-firma-punta-del-este.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🏛️ Página 'Sobre Fabricio' (Carbón/Piedra/Dorado · CLAEH + AEU + ARTOWER)</div>
+                  <div class="link-meta">Sitio Web · <span class="mono">http://localhost:8092/sobre-fabricio.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://localhost:8092/sobre-fabricio.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://localhost:8092/sobre-fabricio.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🏛️ Página 'Sobre Fabricio' (Carbón/Piedra/Dorado · CLAEH + AEU + ARTOWER):%20http://localhost:8092/sobre-fabricio.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🚀 Cabina Local: Pack Maldonado en el Día (CON IA + SIN IA XXL + 3 Reels MP4)</div>
+                  <div class="link-meta">Campaña Redes · <span class="mono">http://localhost:8092/campana/pack_maldonado_en_el_dia/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://localhost:8092/campana/pack_maldonado_en_el_dia/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://localhost:8092/campana/pack_maldonado_en_el_dia/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🚀 Cabina Local: Pack Maldonado en el Día (CON IA + SIN IA XXL + 3 Reels MP4):%20http://localhost:8092/campana/pack_maldonado_en_el_dia/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🎛️ Panel Central 360° de Fabricio Rivas (Actualizado con Vertical #8 Maldonado en el Día)</div>
+                  <div class="link-meta">Panel Operativo · <span class="mono">http://localhost:8092/panel/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://localhost:8092/panel/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://localhost:8092/panel/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🎛️ Panel Central 360° de Fabricio Rivas (Actualizado con Vertical #8 Maldonado en el Día):%20http://localhost:8092/panel/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📊 Planilla Automática Viva: Datos Marketing - Fabricio Rivas (Ads + GA4 + Search Console)</div>
+                  <div class="link-meta">Analítica & Ads · <span class="mono">https://docs.google.com/spreadsheets/d/1MKGODCaO9v9vD77A8pKsijzKMM8-5-G9osmVCfHADvg/edit</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://docs.google.com/spreadsheets/d/1MKGODCaO9v9vD77A8pKsijzKMM8-5-G9osmVCfHADvg/edit" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://docs.google.com/spreadsheets/d/1MKGODCaO9v9vD77A8pKsijzKMM8-5-G9osmVCfHADvg/edit')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📊 Planilla Automática Viva: Datos Marketing - Fabricio Rivas (Ads + GA4 + Search Console):%20https://docs.google.com/spreadsheets/d/1MKGODCaO9v9vD77A8pKsijzKMM8-5-G9osmVCfHADvg/edit" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🎛️ Panel Central 360° de Fabricio Rivas (ABC / 1-2-3 + Generador XXL + Estrategia)</div>
+                  <div class="link-meta">Cabina Operativa de la Cuenta (/panel/) · <span class="mono">http://127.0.0.1:8892/panel/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8892/panel/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8892/panel/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🎛️ Panel Central 360° de Fabricio Rivas (ABC / 1-2-3 + Generador XXL + Estrategia):%20http://127.0.0.1:8892/panel/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🏛️ Página 'Sobre Fabricio' YA CORREGIDA (Tipografía Original Open Sauce One + Foto Limpia + CLAEH + AEU + ARTOWER)</div>
+                  <div class="link-meta">Página Institucional Auditada · <span class="mono">http://127.0.0.1:8892/sobre-fabricio.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8892/sobre-fabricio.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8892/sobre-fabricio.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🏛️ Página 'Sobre Fabricio' YA CORREGIDA (Tipografía Original Open Sauce One + Foto Limpia + CLAEH + AEU + ARTOWER):%20http://127.0.0.1:8892/sobre-fabricio.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📸 Carrusel Oficial Canva / Instagram de Fabricio Rivas (/instagram-carrusel/)</div>
+                  <div class="link-meta">Piezas Gráficas de Redes · <span class="mono">http://127.0.0.1:8892/instagram-carrusel/carrusel_canva_oficial.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8892/instagram-carrusel/carrusel_canva_oficial.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8892/instagram-carrusel/carrusel_canva_oficial.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📸 Carrusel Oficial Canva / Instagram de Fabricio Rivas (/instagram-carrusel/):%20http://127.0.0.1:8892/instagram-carrusel/carrusel_canva_oficial.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🏠 Sitio Completo Local (Home · Soluciones · Real Estate · Foreign Clients · Criterio Notarial)</div>
+                  <div class="link-meta">Sitio Web en Servidor Local (Puerto 8892 / 8092) · <span class="mono">http://127.0.0.1:8892/index.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8892/index.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8892/index.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🏠 Sitio Completo Local (Home · Soluciones · Real Estate · Foreign Clients · Criterio Notarial):%20http://127.0.0.1:8892/index.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📰 Notas SEO/GEO: Comprar con Seguridad Jurídica · Poderes desde el Exterior · Sucesiones · Certificados BPS/DGI</div>
+                  <div class="link-meta">Artículos de Criterio Notarial · <span class="mono">http://127.0.0.1:8892/criterio-notarial.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8892/criterio-notarial.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8892/criterio-notarial.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📰 Notas SEO/GEO: Comprar con Seguridad Jurídica · Poderes desde el Exterior · Sucesiones · Certificados BPS/DGI:%20http://127.0.0.1:8892/criterio-notarial.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🌐 Sitio Público Oficial en Producción (escribanofabriciorivas.com)</div>
+                  <div class="link-meta">Dominio Público Activo · <span class="mono">https://escribanofabriciorivas.com/</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://escribanofabriciorivas.com/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://escribanofabriciorivas.com/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🌐 Sitio Público Oficial en Producción (escribanofabriciorivas.com):%20https://escribanofabriciorivas.com/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
                 </div>
               </div>
             
@@ -429,32 +1003,179 @@
 
             <div class="two-cols">
               <div class="info-box ideas-box">
-                <h4>✍️ Ideas, Copys y Reglas Activas de la Cuenta</h4>
-                <ul><li>Tuteo formal estricto ('tú compras, tu propiedad') para comprador argentino, brasileño, chileno y europeo en Uruguay</li><li>Prohibido prometer precios cerrados de aranceles en web; derivar siempre a consulta personalizada por WhatsApp</li></ul>
+                <div class="box-head">
+                  <h4>✍️ Criterios Cerrados, Reglas e Ideas Activas (Editable con 1 clic)</h4>
+                </div>
+                <ul id="ideas-2-fabricio" class="ideas-ul"><li contenteditable="true" onblur="saveState()">Credenciales Oficiales Validadas: Escribano Público Habilitado · Matrícula Suprema Corte de Justicia N.º 17058/5 · Egresado de la Universidad CLAEH (Facultad de Derecho) · Miembro de la Asociación de Escribanos del Uruguay (AEU).</li><li contenteditable="true" onblur="saveState()">Regla sobre ARTOWER: 'ARTOWER, Francisco Salazar y Chiverta, Punta del Este' ES su dirección física real y va en los bloques de ubicación, Schema.org y footer; solo está prohibido usarla como eslogan publicitario dentro de un texto ('Vení y firmá en Artower').</li><li contenteditable="true" onblur="saveState()">Paleta y Tipografía Innegociables: Carbón #111111, Piedra #e9e7e1, Dorado #c4ad7a, Oliva #504602 y fuente 'Open Sauce One', Inter (prohibido azul y prohibido cambiar la fuente a Avenir Next).</li><li contenteditable="true" onblur="saveState()">Pronombre: Tuteo formal estricto ('tú compras, tratas, tu propiedad, escríbeme'). Prohibido el voseo.</li></ul>
+                <div class="add-row">
+                  <input type="text" id="input-idea-2-fabricio" placeholder="+ Sumar regla o idea a esta cuenta..." onkeydown="if(event.key==='Enter') addIdea('2-fabricio')" />
+                  <button onclick="addIdea('2-fabricio')">+ Agregar</button>
+                </div>
               </div>
+
               <div class="info-box pend-box">
-                <h4>⏳ Temas a Desarrollar / Próximos Pasos</h4>
-                <ul><li>Unificar la estrategia de automatización y calendario de artículos SEO/GEO con la vidriera principal</li><li>Validar fuentes oficiales notariales/impositivas uruguayas en cada nota técnica para extranjeros</li></ul>
+                <div class="box-head">
+                  <h4>⏳ Checklist de Pendientes y Próximos Pasos (Tildá o editá en vivo)</h4>
+                </div>
+                <ul id="pend-2-fabricio" class="pend-ul"><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Incorporar la fotografía real de la oficina/estudio en el bloque 'Sede en Punta del Este (ARTOWER)' de sobre-fabricio.html apenas esté disponible la foto.</span>
+                </li><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Publicar (git push) la nueva página sobre-fabricio.html al dominio escribanofabriciorivas.com una vez que Ariana dé el OK final.</span>
+                </li><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Replicar las 3 Bases Maestras Editables de Canva (Reel, Feed 4:5 y LinkedIn con márgenes seguros) con la estética Carbón/Piedra/Dorado de Fabricio.</span>
+                </li></ul>
+                <div class="add-row">
+                  <input type="text" id="input-pend-2-fabricio" placeholder="+ Sumar pendiente o tarea a esta cuenta..." onkeydown="if(event.key==='Enter') addPend('2-fabricio')" />
+                  <button onclick="addPend('2-fabricio')">+ Agregar</button>
+                </div>
               </div>
+            </div>
+
+            <div class="notes-area">
+              <label>🧠 Pizarrón libre para pensar esta cuenta (se guarda solo en tu navegador):</label>
+              <textarea id="notes-2-fabricio" oninput="saveState()" placeholder="Escribí acá borradores, dudas, cosas para pedirle a Mauro / Fabricio / Eliezer o lo que quieras destrabar en esta cuenta..."></textarea>
             </div>
           </section>
         
-          <section class="proj-card" id="3-entretelado" style="border-top: 5px solid #78350f;">
+          <section class="proj-card" id="3-entretelado" data-proj="3-entretelado" style="border-top: 6px solid #78350f;">
             <div class="proj-header">
               <div>
-                <span class="proj-badge" style="background:#78350f;">3 · E-COMMERCE & B2B</span>
-                <h2>3 - ENTRETELADO (Textil Hogar & Hotelería — Uruguay)</h2>
-                <div class="commit-line">🔄 Último movimiento: de67ff7 · feat(seo-naming): implement two-layer naming architecture (exact search keywords in H1/slug/ML + conceptual hooks in badges/subtitles) (26 hours ago)</div>
+                <span class="proj-badge" style="background:#78350f;">3 · E-COMMERCE & B2B TEXTIL</span>
+                <h2>3 - ENTRETELADO (Textil Hogar & Hotelería · Matriz E-Commerce 360°)</h2>
+                <div class="commit-line">🔄 Estado: c5055d0 · feat(payments): replace Santander with Prex 1404028 and Argentina USD Alias with checkout USD conversion and private holder (30 hours ago)</div>
               </div>
             </div>
 
             <div class="links-list">
-              <h3>🌐 Links, Sitios y Entregables Vivos (1 Clic para Abrir, Copiar o Mandar por WhatsApp)</h3>
+              <h3>🌐 Paneles Operativos, Herramientas, Redes y Sitios de esta Cuenta (1 Clic)</h3>
               
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🌐 SITIO EN VIVO 24/7 (entretelado.vercel.app · Checkout Real MP + HSBC/Santander + 4 Zonas Estrictas)</div>
+                  <div class="link-meta">Linktree Proyecto · <span class="mono">https://entretelado.vercel.app/</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://entretelado.vercel.app/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://entretelado.vercel.app/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🌐 SITIO EN VIVO 24/7 (entretelado.vercel.app · Checkout Real MP + HSBC/Santander + 4 Zonas Estrictas):%20https://entretelado.vercel.app/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🧪 PRODUCTO TEST OCULTO DE $10 UYU (Para probar hoy compra real con Mercado Pago y Transferencia HSBC/Santander)</div>
+                  <div class="link-meta">Linktree Proyecto · <span class="mono">https://entretelado.vercel.app/producto/producto-test-compra-10-uyu</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://entretelado.vercel.app/producto/producto-test-compra-10-uyu" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://entretelado.vercel.app/producto/producto-test-compra-10-uyu')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🧪 PRODUCTO TEST OCULTO DE $10 UYU (Para probar hoy compra real con Mercado Pago y Transferencia HSBC/Santander):%20https://entretelado.vercel.app/producto/producto-test-compra-10-uyu" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">💳 CHECKOUT REAL DOBLE COBRO (Mercado Pago UY + Transferencia HSBC y Santander en 1 Clic + 4 Zonas PDE/Maldonado/La Barra/Manantiales)</div>
+                  <div class="link-meta">Linktree Proyecto · <span class="mono">https://entretelado.vercel.app/checkout</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://entretelado.vercel.app/checkout" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://entretelado.vercel.app/checkout')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=💳 CHECKOUT REAL DOBLE COBRO (Mercado Pago UY + Transferencia HSBC y Santander en 1 Clic + 4 Zonas PDE/Maldonado/La Barra/Manantiales):%20https://entretelado.vercel.app/checkout" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🏨 EMBUDO B2B 'PACK DE PRUEBA EN SERVICIO REAL' (/entre-huespedes · 3 Packs de Prueba Hoy + Calificador de 3 Preguntas)</div>
+                  <div class="link-meta">Linktree Proyecto · <span class="mono">https://entretelado.vercel.app/entre-huespedes</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://entretelado.vercel.app/entre-huespedes" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://entretelado.vercel.app/entre-huespedes')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🏨 EMBUDO B2B 'PACK DE PRUEBA EN SERVICIO REAL' (/entre-huespedes · 3 Packs de Prueba Hoy + Calificador de 3 Preguntas):%20https://entretelado.vercel.app/entre-huespedes" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🔥 PRODUCTO ANCLA AGOTADO ($6.890 UYU) CON LISTA DE ESPERA 3 CLICS + DETECTOR B2B Y CUPÓN ESPERA10</div>
+                  <div class="link-meta">Linktree Proyecto · <span class="mono">https://entretelado.vercel.app/producto/set-cama-hotelera-completo-duvet-percal-king-queen</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://entretelado.vercel.app/producto/set-cama-hotelera-completo-duvet-percal-king-queen" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://entretelado.vercel.app/producto/set-cama-hotelera-completo-duvet-percal-king-queen')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🔥 PRODUCTO ANCLA AGOTADO ($6.890 UYU) CON LISTA DE ESPERA 3 CLICS + DETECTOR B2B Y CUPÓN ESPERA10:%20https://entretelado.vercel.app/producto/set-cama-hotelera-completo-duvet-percal-king-queen" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📋 PANEL DE PROSPECCIÓN MANO A MANO EN /admin/clientes (34 Prospectos Reales Verificados en PDE, Maldonado, La Barra y Manantiales)</div>
+                  <div class="link-meta">Linktree Proyecto · <span class="mono">https://entretelado.vercel.app/admin/clientes</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://entretelado.vercel.app/admin/clientes" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://entretelado.vercel.app/admin/clientes')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📋 PANEL DE PROSPECCIÓN MANO A MANO EN /admin/clientes (34 Prospectos Reales Verificados en PDE, Maldonado, La Barra y Manantiales):%20https://entretelado.vercel.app/admin/clientes" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📊 TABLERO CONSOLIDADO DE LECTURA DE DATOS EN /admin/negocio (Stock Físico, Alertas MLU, Pedidos Web/ML, Agotados, Calificador B2B y Grilla IG)</div>
+                  <div class="link-meta">Linktree Proyecto · <span class="mono">https://entretelado.vercel.app/admin/negocio</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://entretelado.vercel.app/admin/negocio" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://entretelado.vercel.app/admin/negocio')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📊 TABLERO CONSOLIDADO DE LECTURA DE DATOS EN /admin/negocio (Stock Físico, Alertas MLU, Pedidos Web/ML, Agotados, Calificador B2B y Grilla IG):%20https://entretelado.vercel.app/admin/negocio" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🛒 PANEL MERCADO LIBRE URUGUAY (/admin/mercadolibre · 5 Combos Publicados Activos + Alertas de Stock)</div>
+                  <div class="link-meta">Linktree Proyecto · <span class="mono">https://entretelado.vercel.app/admin/mercadolibre</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://entretelado.vercel.app/admin/mercadolibre" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://entretelado.vercel.app/admin/mercadolibre')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🛒 PANEL MERCADO LIBRE URUGUAY (/admin/mercadolibre · 5 Combos Publicados Activos + Alertas de Stock):%20https://entretelado.vercel.app/admin/mercadolibre" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🧠 Centro de Comando de Negocio (/admin/negocio · Unit Economics en USD, Regla 60/25/15 y Proveedores)</div>
+                  <div class="link-meta">Cerebro Comercial Privado · <span class="mono">https://99kg41rtkh.c37.airoapp.ai/admin/negocio</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://99kg41rtkh.c37.airoapp.ai/admin/negocio" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://99kg41rtkh.c37.airoapp.ai/admin/negocio')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🧠 Centro de Comando de Negocio (/admin/negocio · Unit Economics en USD, Regla 60/25/15 y Proveedores):%20https://99kg41rtkh.c37.airoapp.ai/admin/negocio" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🔐 Panel Admin General (/admin · Catálogo, SKUs y Configuración)</div>
+                  <div class="link-meta">Backoffice Privado · <span class="mono">https://99kg41rtkh.c37.airoapp.ai/admin</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://99kg41rtkh.c37.airoapp.ai/admin" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://99kg41rtkh.c37.airoapp.ai/admin')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🔐 Panel Admin General (/admin · Catálogo, SKUs y Configuración):%20https://99kg41rtkh.c37.airoapp.ai/admin" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
               <div class="link-item">
                 <div class="link-info">
                   <div class="link-title">🛏️ Tienda E-Commerce Entretelado (Vidriera Pública)</div>
-                  <div class="link-meta">Tienda Next.js · <span class="mono">https://99kg41rtkh.c37.airoapp.ai/</span></div>
+                  <div class="link-meta">Tienda Next.js en Vivo · <span class="mono">https://99kg41rtkh.c37.airoapp.ai/</span></div>
                 </div>
                 <div class="link-btns">
                   <a href="https://99kg41rtkh.c37.airoapp.ai/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
@@ -463,53 +1184,224 @@
                 </div>
               </div>
             
-              <div class="link-item">
-                <div class="link-info">
-                  <div class="link-title">🔐 Panel Admin + Simulador Financiero + Cerebro Maestro</div>
-                  <div class="link-meta">Backoffice Privado (/admin) · <span class="mono">https://99kg41rtkh.c37.airoapp.ai/admin</span></div>
-                </div>
-                <div class="link-btns">
-                  <a href="https://99kg41rtkh.c37.airoapp.ai/admin" target="_blank" class="btn-act btn-open">👉 Abrir</a>
-                  <button onclick="copyUrl('https://99kg41rtkh.c37.airoapp.ai/admin')" class="btn-act btn-copy">📋 Copiar URL</button>
-                  <a href="https://wa.me/?text=🔐 Panel Admin + Simulador Financiero + Cerebro Maestro:%20https://99kg41rtkh.c37.airoapp.ai/admin" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
-                </div>
-              </div>
-            
             </div>
 
             <div class="two-cols">
               <div class="info-box ideas-box">
-                <h4>✍️ Ideas, Copys y Reglas Activas de la Cuenta</h4>
-                <ul><li>Naming de Doble Capa: Palabra clave literal masiva en H1/URL/ML ('Set Pie de Cama XL + 2 Fundas 50x70 Algodón') + Concepto en Badge ('Entre Huéspedes', 'Cero Plancha')</li><li>Candado #6: Nombres de fábricas (Aldeana, Wossen, Alondra, Blanco Galil) ocultos exclusivamente en /admin</li></ul>
+                <div class="box-head">
+                  <h4>✍️ Criterios Cerrados, Reglas e Ideas Activas (Editable con 1 clic)</h4>
+                </div>
+                <ul id="ideas-3-entretelado" class="ideas-ul"><li contenteditable="true" onblur="saveState()">Candado #6 (Cocina vs. Vidriera): Los nombres de fábricas/mayoristas (Aldeana, Wossen, Alondra, Casa Nueva, Gioconda, Blanco Galil) y reglas internas (60/25/15, Cápsula Valija) van ÚNICAMENTE en campos privados de /admin, jamás en SKU, URL, H1 ni Mercado Libre.</li><li contenteditable="true" onblur="saveState()">Filtro de Doble Capa SEO/ML: En H1 y URL van palabras clave literales de búsqueda masiva ('Set Pie de Cama XL + 2 Fundas 50x70 Algodón', 'Juego Toalla y Toallón 430g Zero Twist'); los nombres conceptuales ('Entre Huéspedes', 'Cero Plancha') van en Badge y anuncios.</li><li contenteditable="true" onblur="saveState()">Unit Economics Reales: Costos e inversión anclados en USD y precios al público en moneda local descontando IVA, pasarela, logística y estructura fija.</li></ul>
+                <div class="add-row">
+                  <input type="text" id="input-idea-3-entretelado" placeholder="+ Sumar regla o idea a esta cuenta..." onkeydown="if(event.key==='Enter') addIdea('3-entretelado')" />
+                  <button onclick="addIdea('3-entretelado')">+ Agregar</button>
+                </div>
               </div>
+
               <div class="info-box pend-box">
-                <h4>⏳ Temas a Desarrollar / Próximos Pasos</h4>
-                <ul><li>Cierre de compra inicial bajo regla 60% Tracción / 25% Margen / 15% Imagen y validación de costos en USD</li><li>Activación de alianzas B2B con administradoras de alquiler temporario en Punta del Este</li></ul>
+                <div class="box-head">
+                  <h4>⏳ Checklist de Pendientes y Próximos Pasos (Tildá o editá en vivo)</h4>
+                </div>
+                <ul id="pend-3-entretelado" class="pend-ul"><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Cerrar matriz de compra inicial (Aldeana / Wossen Karsten Zero Twist 430g / Blanco Galil) bajo la regla 60% Tracción / 25% Margen / 15% Imagen.</span>
+                </li><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Verificar en base de datos viva (Prisma) cómo quedaron grabadas las fichas públicas tras la carga de catálogo.</span>
+                </li><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Activar circuito B2B para administradoras de alquiler temporario y hotelería boutique.</span>
+                </li></ul>
+                <div class="add-row">
+                  <input type="text" id="input-pend-3-entretelado" placeholder="+ Sumar pendiente o tarea a esta cuenta..." onkeydown="if(event.key==='Enter') addPend('3-entretelado')" />
+                  <button onclick="addPend('3-entretelado')">+ Agregar</button>
+                </div>
               </div>
+            </div>
+
+            <div class="notes-area">
+              <label>🧠 Pizarrón libre para pensar esta cuenta (se guarda solo en tu navegador):</label>
+              <textarea id="notes-3-entretelado" oninput="saveState()" placeholder="Escribí acá borradores, dudas, cosas para pedirle a Mauro / Fabricio / Eliezer o lo que quieras destrabar en esta cuenta..."></textarea>
             </div>
           </section>
         
-          <section class="proj-card" id="5-eliezer" style="border-top: 5px solid #581c87;">
+          <section class="proj-card" id="5-eliezer" data-proj="5-eliezer" style="border-top: 6px solid #581c87;">
             <div class="proj-header">
               <div>
-                <span class="proj-badge" style="background:#581c87;">5 · COMUNIDAD & EXPANSIÓN</span>
-                <h2>5 - ELIEZER SHEMTOV (Comunidad, Contenido & Expansión PDE)</h2>
-                <div class="commit-line">🔄 Último movimiento: Sincronizado en carpeta local / Drive</div>
+                <span class="proj-badge" style="background:#581c87;">5 · COMUNIDAD, CONTENIDO & DONANTES PDE</span>
+                <h2>5 - ELIEZER SHEMTOV (Rabino Jabad Punta del Este · Sistema de Contenido y Deck de Donantes)</h2>
+                <div class="commit-line">🔄 Estado: Sincronizado en vivo en carpeta local y Google Drive</div>
               </div>
             </div>
 
             <div class="links-list">
-              <h3>🌐 Links, Sitios y Entregables Vivos (1 Clic para Abrir, Copiar o Mandar por WhatsApp)</h3>
+              <h3>🌐 Paneles Operativos, Herramientas, Redes y Sitios de esta Cuenta (1 Clic)</h3>
               
               <div class="link-item">
                 <div class="link-info">
-                  <div class="link-title">✨ Carpeta Central de Proyecto (Presentación Stakeholders + Máquina Semanal)</div>
-                  <div class="link-meta">Frente de Guerra Retroalimentado · <span class="mono">https://alliance-phrases-camcorders-underlying.trycloudflare.com/HUB_GENERAL_ARIANA.html#5-eliezer</span></div>
+                  <div class="link-title">https://limud-jabad-punta.pages.dev</div>
+                  <div class="link-meta">public · <span class="mono">https://limud-jabad-punta.pages.dev</span></div>
                 </div>
                 <div class="link-btns">
-                  <a href="https://alliance-phrases-camcorders-underlying.trycloudflare.com/HUB_GENERAL_ARIANA.html#5-eliezer" target="_blank" class="btn-act btn-open">👉 Abrir</a>
-                  <button onclick="copyUrl('https://alliance-phrases-camcorders-underlying.trycloudflare.com/HUB_GENERAL_ARIANA.html#5-eliezer')" class="btn-act btn-copy">📋 Copiar URL</button>
-                  <a href="https://wa.me/?text=✨ Carpeta Central de Proyecto (Presentación Stakeholders + Máquina Semanal):%20https://alliance-phrases-camcorders-underlying.trycloudflare.com/HUB_GENERAL_ARIANA.html#5-eliezer" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                  <a href="https://limud-jabad-punta.pages.dev" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://limud-jabad-punta.pages.dev')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=https://limud-jabad-punta.pages.dev:%20https://limud-jabad-punta.pages.dev" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">https://limud-jabad-punta.pages.dev/piloto</div>
+                  <div class="link-meta">public · <span class="mono">https://limud-jabad-punta.pages.dev/piloto</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://limud-jabad-punta.pages.dev/piloto" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://limud-jabad-punta.pages.dev/piloto')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=https://limud-jabad-punta.pages.dev/piloto:%20https://limud-jabad-punta.pages.dev/piloto" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">https://limud-jabad-punta.pages.dev/laminas</div>
+                  <div class="link-meta">design · <span class="mono">https://limud-jabad-punta.pages.dev/laminas</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://limud-jabad-punta.pages.dev/laminas" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://limud-jabad-punta.pages.dev/laminas')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=https://limud-jabad-punta.pages.dev/laminas:%20https://limud-jabad-punta.pages.dev/laminas" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">https://limud-jabad-punta.pages.dev/metricas</div>
+                  <div class="link-meta">analytics · <span class="mono">https://limud-jabad-punta.pages.dev/metricas</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://limud-jabad-punta.pages.dev/metricas" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://limud-jabad-punta.pages.dev/metricas')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=https://limud-jabad-punta.pages.dev/metricas:%20https://limud-jabad-punta.pages.dev/metricas" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">https://docs.google.com/spreadsheets/d/1ll8-qx1beJRgsYgSfqYmDGWLD6omgKmQtMMZ3EomhQ4/edit?usp=sharing</div>
+                  <div class="link-meta">approval · <span class="mono">https://docs.google.com/spreadsheets/d/1ll8-qx1beJRgsYgSfqYmDGWLD6omgKmQtMMZ3EomhQ4/edit?usp=sharing</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://docs.google.com/spreadsheets/d/1ll8-qx1beJRgsYgSfqYmDGWLD6omgKmQtMMZ3EomhQ4/edit?usp=sharing" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://docs.google.com/spreadsheets/d/1ll8-qx1beJRgsYgSfqYmDGWLD6omgKmQtMMZ3EomhQ4/edit?usp=sharing')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=https://docs.google.com/spreadsheets/d/1ll8-qx1beJRgsYgSfqYmDGWLD6omgKmQtMMZ3EomhQ4/edit?usp=sharing:%20https://docs.google.com/spreadsheets/d/1ll8-qx1beJRgsYgSfqYmDGWLD6omgKmQtMMZ3EomhQ4/edit?usp=sharing" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🌳 LINKTREE / PORTAL PÚBLICO CICLO LIMUD EN VIVO (limud-jabad-punta.pages.dev · Clases 1 a 4 + PDFs + Videos)</div>
+                  <div class="link-meta">Linktree Público Oficial Limud (Cloudflare Pages) · <span class="mono">https://limud-jabad-punta.pages.dev/</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://limud-jabad-punta.pages.dev/" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://limud-jabad-punta.pages.dev/')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🌳 LINKTREE / PORTAL PÚBLICO CICLO LIMUD EN VIVO (limud-jabad-punta.pages.dev · Clases 1 a 4 + PDFs + Videos):%20https://limud-jabad-punta.pages.dev/" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🎬 NUEVO: Muestra Piloto (Short 9:16 + Clip 16:9) + Glosario Fonético + Archivo Temático + Calendario Salteado</div>
+                  <div class="link-meta">Cabina Audiovisual y Muestra Piloto · <span class="mono">http://127.0.0.1:8899/PANEL_PILOTO_Y_ARCHIVO_TEMATICO_ELIEZER.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8899/PANEL_PILOTO_Y_ARCHIVO_TEMATICO_ELIEZER.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8899/PANEL_PILOTO_Y_ARCHIVO_TEMATICO_ELIEZER.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🎬 NUEVO: Muestra Piloto (Short 9:16 + Clip 16:9) + Glosario Fonético + Archivo Temático + Calendario Salteado:%20http://127.0.0.1:8899/PANEL_PILOTO_Y_ARCHIVO_TEMATICO_ELIEZER.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">✨ Presentación Plan Maestro Eliezer Shemtov (PRESENTACION_PLAN_MAESTRO_ELIEZER.html)</div>
+                  <div class="link-meta">Presentación Interactiva · <span class="mono">http://127.0.0.1:8899/PRESENTACION_PLAN_MAESTRO_ELIEZER.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8899/PRESENTACION_PLAN_MAESTRO_ELIEZER.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8899/PRESENTACION_PLAN_MAESTRO_ELIEZER.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=✨ Presentación Plan Maestro Eliezer Shemtov (PRESENTACION_PLAN_MAESTRO_ELIEZER.html):%20http://127.0.0.1:8899/PRESENTACION_PLAN_MAESTRO_ELIEZER.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">✅ Planilla Interactiva de Aprobación y Seguimiento (PLANILLA_INTERACTIVA_APROBACION_ELIEZER.html)</div>
+                  <div class="link-meta">Panel de Checks y Aprobación · <span class="mono">http://127.0.0.1:8899/PLANILLA_INTERACTIVA_APROBACION_ELIEZER.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8899/PLANILLA_INTERACTIVA_APROBACION_ELIEZER.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8899/PLANILLA_INTERACTIVA_APROBACION_ELIEZER.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=✅ Planilla Interactiva de Aprobación y Seguimiento (PLANILLA_INTERACTIVA_APROBACION_ELIEZER.html):%20http://127.0.0.1:8899/PLANILLA_INTERACTIVA_APROBACION_ELIEZER.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📦 Panel Pack Clase 3 Limud (PANEL_PACK_CLASE_3_ELIEZER.html)</div>
+                  <div class="link-meta">Pack Operativo de Clase · <span class="mono">http://127.0.0.1:8899/PANEL_PACK_CLASE_3_ELIEZER.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8899/PANEL_PACK_CLASE_3_ELIEZER.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8899/PANEL_PACK_CLASE_3_ELIEZER.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📦 Panel Pack Clase 3 Limud (PANEL_PACK_CLASE_3_ELIEZER.html):%20http://127.0.0.1:8899/PANEL_PACK_CLASE_3_ELIEZER.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🏛️ Congreso y Visión Punta del Este (CONGRESO_Y_VISION_PDE_ELIEZER.html)</div>
+                  <div class="link-meta">Estrategia y Deck · <span class="mono">http://127.0.0.1:8899/CONGRESO_Y_VISION_PDE_ELIEZER.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8899/CONGRESO_Y_VISION_PDE_ELIEZER.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8899/CONGRESO_Y_VISION_PDE_ELIEZER.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🏛️ Congreso y Visión Punta del Este (CONGRESO_Y_VISION_PDE_ELIEZER.html):%20http://127.0.0.1:8899/CONGRESO_Y_VISION_PDE_ELIEZER.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">💰 Propuesta de Ítems y Presupuesto (PROPUESTA_ITEMS_PRESUPUESTO_ELIEZER.html)</div>
+                  <div class="link-meta">Presupuesto y Alcance · <span class="mono">http://127.0.0.1:8899/PROPUESTA_ITEMS_PRESUPUESTO_ELIEZER.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8899/PROPUESTA_ITEMS_PRESUPUESTO_ELIEZER.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8899/PROPUESTA_ITEMS_PRESUPUESTO_ELIEZER.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=💰 Propuesta de Ítems y Presupuesto (PROPUESTA_ITEMS_PRESUPUESTO_ELIEZER.html):%20http://127.0.0.1:8899/PROPUESTA_ITEMS_PRESUPUESTO_ELIEZER.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">👤 Búsqueda / Rol Producción & CM (JD_CM_PRODUCCION_ELIEZER.html)</div>
+                  <div class="link-meta">Perfil Operativo · <span class="mono">http://127.0.0.1:8899/JD_CM_PRODUCCION_ELIEZER.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8899/JD_CM_PRODUCCION_ELIEZER.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8899/JD_CM_PRODUCCION_ELIEZER.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=👤 Búsqueda / Rol Producción & CM (JD_CM_PRODUCCION_ELIEZER.html):%20http://127.0.0.1:8899/JD_CM_PRODUCCION_ELIEZER.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">📲 Aprobalo Cloud — Piezas de E.S º Jabad Punta en la Nube</div>
+                  <div class="link-meta">Aprobalo Cloud 24/7 · <span class="mono">https://aprobala-app.943ari.workers.dev/?cuenta=353cf6bd-4f88-43ef-90f2-3d9c2a9a35dc</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="https://aprobala-app.943ari.workers.dev/?cuenta=353cf6bd-4f88-43ef-90f2-3d9c2a9a35dc" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('https://aprobala-app.943ari.workers.dev/?cuenta=353cf6bd-4f88-43ef-90f2-3d9c2a9a35dc')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=📲 Aprobalo Cloud — Piezas de E.S º Jabad Punta en la Nube:%20https://aprobala-app.943ari.workers.dev/?cuenta=353cf6bd-4f88-43ef-90f2-3d9c2a9a35dc" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
                 </div>
               </div>
             
@@ -517,13 +1409,120 @@
 
             <div class="two-cols">
               <div class="info-box ideas-box">
-                <h4>✍️ Ideas, Copys y Reglas Activas de la Cuenta</h4>
-                <ul><li>Retroalimentación Viva: Charla Previa ↔ Presentación Mágica (Stakeholders) ↔ Máquina de los Miércoles ↔ Máquina de los Jueves ↔ YouTube & Ads</li><li>Lo que se produce los Miércoles y Jueves alimenta de casos reales a la Presentación Mágica y a las campañas</li></ul>
+                <div class="box-head">
+                  <h4>✍️ Criterios Cerrados, Reglas e Ideas Activas (Editable con 1 clic)</h4>
+                </div>
+                <ul id="ideas-5-eliezer" class="ideas-ul"><li contenteditable="true" onblur="saveState()">Dos planos que JAMÁS se mezclan: 1) Lo Operativo (circuito, horas, rol de quien ejecuta sobre el modelo Pack-Kipur) es para Eliezer y quien ejecute; 2) Lo Narrativo (magnitud, verdad concreta, alcance que salga de la sala) es para quien pone el dinero (Deck de Donantes).</li><li contenteditable="true" onblur="saveState()">Packs definidos: Pack Clase Miércoles en español (Limud, grupo mujeres -> LLEVA PDF) · Pack Clase Jueves en inglés (grupo distinto -> NO LLEVA PDF) · Pack Fiesta (antes, durante, después, modelo Kipur) · Heladera (banco de ideas, fuera del deck de donantes).</li><li contenteditable="true" onblur="saveState()">Prohibiciones absolutas en esta cuenta: Prohibido usar las palabras 'religioso', 'practicante', 'pocos' (usar círculos) o 'LOBBY'. Prohibido diagnosticar la cabeza del rabino o poner 'Persona a contratar' como centro del pitch a donantes. Prohibido inventar cifras, horas o títulos de charlas.</li><li contenteditable="true" onblur="saveState()">Arquitectura Audiovisual 3 Capas + Acortador Propio (Opción C activa en Cloudflare Worker sin TinyURL): 1) Video Largo 16:9 limpio + pistas oficiales .srt ES/EN por API (cero choque con CC de YouTube), 2) Clip 16:9 (2-6 min) en doble versión (clean + .srt para YouTube y burned ES+EN para Archivo Temático de Festividades/Hechos del Mundo), 3) Short 9:16 con Cold Open 0.0s (destello cálido + foley acústico sutil de vela), cierre 35mm de 2s, mosca en X:80,Y:140 y subtítulo dual ES+EN en zona segura Y:1180-1360px (arriba de los 520px inferiores), con diccionario fonético Di-s/G-d y Jabad/Chabad.</li><li contenteditable="true" onblur="saveState()">Calendario en Redes con Lógica Salteada (Matriz en Espiral): Jamás publicar el Short el mismo día del Video Largo ni repetir el mismo eje temático dos días seguidos; intercalar Sabiduría Cotidiana -> Familia/Vínculos -> Parashá/Shabat -> Respuesta al Mundo y conectar cada Short al Video Largo con 'Video Relacionado' de YouTube.</li></ul>
+                <div class="add-row">
+                  <input type="text" id="input-idea-5-eliezer" placeholder="+ Sumar regla o idea a esta cuenta..." onkeydown="if(event.key==='Enter') addIdea('5-eliezer')" />
+                  <button onclick="addIdea('5-eliezer')">+ Agregar</button>
+                </div>
               </div>
+
               <div class="info-box pend-box">
-                <h4>⏳ Temas a Desarrollar / Próximos Pasos</h4>
-                <ul><li>Publicar el Linktree específico de entregables de Eliezer Shemtov (Presentación Mágica + Pack Miércoles/Jueves) en URL viva</li><li>Conectar calendario de contenidos de Miércoles y Jueves con pauta de amplificación</li></ul>
+                <div class="box-head">
+                  <h4>⏳ Checklist de Pendientes y Próximos Pasos (Tildá o editá en vivo)</h4>
+                </div>
+                <ul id="pend-5-eliezer" class="pend-ul"><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">🌐 PENDIENTE REAL DNS ACORTADOR (Opción B): Pedir a Montevideo (administrador de jabad.org.uy) cargar 1 solo registro DNS CNAME (punta.jabad.org.uy -> nuestro Cloudflare Worker) o conectar el dominio propio de Eliezer Shemtov (mientras tanto corre activo en Opción C sobre nuestro Cloudflare Worker sin TinyURL).</span>
+                </li><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">📁 PENDIENTE FUTURO DRIVE DE JABAD (youtube.punta@jabad.org.uy): Por ahora trabajamos 100% con lo que ya está conectado (carpeta 'Eliezer Shemtov pp AG' para la cocina y nuestro servidor Cloud/Aprobalo para links públicos sin mostrar starunionservicios.com.ar). Queda como pendiente futuro conectar youtube.punta@jabad.org.uy cuando se destraben los permisos de esa cuenta.</span>
+                </li><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Reescribir el Deck de Donantes ('Plan de Difusión') con magia, verdad y vuelo real (sin poner 'Persona a contratar' como centro del proyecto ni justificaciones internas).</span>
+                </li><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Armar el 'Super Calendario por Categorías' que responda 'qué pasa la semana que viene' (hoy está adentro pero sin armar).</span>
+                </li><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Definir las 9 preguntas abiertas: 1) ¿Entran los dos canales de YouTube o uno solo ('Jabad Punta')?, 2) Integración de grupos de WhatsApp existentes (Hombres, Mujeres, Limud, Parashá), 3) Quién ocupa producción/comunidad, 4) Figura legal (asociación civil o fundación), 5) Tarifa hora producción y monto pauta, 6) Modalidad cobro etapa siguiente (bloque, mensual o proyecto).</span>
+                </li></ul>
+                <div class="add-row">
+                  <input type="text" id="input-pend-5-eliezer" placeholder="+ Sumar pendiente o tarea a esta cuenta..." onkeydown="if(event.key==='Enter') addPend('5-eliezer')" />
+                  <button onclick="addPend('5-eliezer')">+ Agregar</button>
+                </div>
               </div>
+            </div>
+
+            <div class="notes-area">
+              <label>🧠 Pizarrón libre para pensar esta cuenta (se guarda solo en tu navegador):</label>
+              <textarea id="notes-5-eliezer" oninput="saveState()" placeholder="Escribí acá borradores, dudas, cosas para pedirle a Mauro / Fabricio / Eliezer o lo que quieras destrabar en esta cuenta..."></textarea>
+            </div>
+          </section>
+        
+          <section class="proj-card" id="0-clon" data-proj="0-clon" style="border-top: 6px solid #059669;">
+            <div class="proj-header">
+              <div>
+                <span class="proj-badge" style="background:#059669;">0 · DIRECCIÓN GENERAL & CLON</span>
+                <h2>0 - Dirección General, Clon Evolutivo y Reglas Globales de Ariana</h2>
+                <div class="commit-line">🔄 Estado: Sincronizado en vivo en carpeta local y Google Drive</div>
+              </div>
+            </div>
+
+            <div class="links-list">
+              <h3>🌐 Paneles Operativos, Herramientas, Redes y Sitios de esta Cuenta (1 Clic)</h3>
+              
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🌳 Este Tablero General Maestro (Todas las Cuentas, Accesos y Pendientes Interactivos)</div>
+                  <div class="link-meta">Servidor Local Permanente (Puerto 8899) · <span class="mono">http://127.0.0.1:8899/HUB_GENERAL_ARIANA.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8899/HUB_GENERAL_ARIANA.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8899/HUB_GENERAL_ARIANA.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🌳 Este Tablero General Maestro (Todas las Cuentas, Accesos y Pendientes Interactivos):%20http://127.0.0.1:8899/HUB_GENERAL_ARIANA.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+              <div class="link-item">
+                <div class="link-info">
+                  <div class="link-title">🧬 Panel Vivo de tu Clon Evolutivo + Tabla de Comandos</div>
+                  <div class="link-meta">Reglas Destiladas y Manual de Uso · <span class="mono">http://127.0.0.1:8899/CLON_ARIANA_PANEL_VIVO.html</span></div>
+                </div>
+                <div class="link-btns">
+                  <a href="http://127.0.0.1:8899/CLON_ARIANA_PANEL_VIVO.html" target="_blank" class="btn-act btn-open">👉 Abrir</a>
+                  <button onclick="copyUrl('http://127.0.0.1:8899/CLON_ARIANA_PANEL_VIVO.html')" class="btn-act btn-copy">📋 Copiar URL</button>
+                  <a href="https://wa.me/?text=🧬 Panel Vivo de tu Clon Evolutivo + Tabla de Comandos:%20http://127.0.0.1:8899/CLON_ARIANA_PANEL_VIVO.html" target="_blank" class="btn-act btn-wa">📲 WhatsApp</a>
+                </div>
+              </div>
+            
+            </div>
+
+            <div class="two-cols">
+              <div class="info-box ideas-box">
+                <div class="box-head">
+                  <h4>✍️ Criterios Cerrados, Reglas e Ideas Activas (Editable con 1 clic)</h4>
+                </div>
+                <ul id="ideas-0-clon" class="ideas-ul"><li contenteditable="true" onblur="saveState()">Regla #10 (Verificación Visual Previa): Ningún agente puede entregarte una web o pieza gráfica sin antes sacarle captura en Chrome Headless y mirarla con sus propios ojos (cero carteles en la cara, cero tipografías cambiadas, cero bordes cortados).</li><li contenteditable="true" onblur="saveState()">Regla #12 (URLs en Producción vs Staging): Prohibido poner sub-rutas de un sitio en staging dentro de copies de LinkedIn/IG/Perfit que salen hoy; usar el dominio raíz activo hasta el día de publicación.</li><li contenteditable="true" onblur="saveState()">Modo de trabajo sin desgaste: Hablás la estrategia en cada cuenta, y cuando quieras ejecución directa o destrabar algo sin pelear, me decís acá 'Entrá vos a [Cuenta] y hacelo'.</li></ul>
+                <div class="add-row">
+                  <input type="text" id="input-idea-0-clon" placeholder="+ Sumar regla o idea a esta cuenta..." onkeydown="if(event.key==='Enter') addIdea('0-clon')" />
+                  <button onclick="addIdea('0-clon')">+ Agregar</button>
+                </div>
+              </div>
+
+              <div class="info-box pend-box">
+                <div class="box-head">
+                  <h4>⏳ Checklist de Pendientes y Próximos Pasos (Tildá o editá en vivo)</h4>
+                </div>
+                <ul id="pend-0-clon" class="pend-ul"><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Instalar el plugin 'Chrome DevTools' desde la tarjetita del chat para dejar habilitado el control directo del navegador sin tener que escribir /browser.</span>
+                </li><li class="pend-item">
+                  <input type="checkbox" onchange="togglePend(this)" />
+                  <span contenteditable="true" onblur="saveState()">Configurar la generación automática quincenal (/schedule) de los packs de redes sobre las 3 Bases Maestras de Canva.</span>
+                </li></ul>
+                <div class="add-row">
+                  <input type="text" id="input-pend-0-clon" placeholder="+ Sumar pendiente o tarea a esta cuenta..." onkeydown="if(event.key==='Enter') addPend('0-clon')" />
+                  <button onclick="addPend('0-clon')">+ Agregar</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="notes-area">
+              <label>🧠 Pizarrón libre para pensar esta cuenta (se guarda solo en tu navegador):</label>
+              <textarea id="notes-0-clon" oninput="saveState()" placeholder="Escribí acá borradores, dudas, cosas para pedirle a Mauro / Fabricio / Eliezer o lo que quieras destrabar en esta cuenta..."></textarea>
             </div>
           </section>
         
@@ -531,13 +1530,97 @@
 
   <div id="toast" class="toast"></div>
   <script>
+    const STORAGE_KEY = "ariana_hub_state_v2";
+
     function copyUrl(txt) {
       navigator.clipboard.writeText(txt);
       const t = document.getElementById("toast");
       t.textContent = "✅ URL copiada en 1 clic: " + txt;
       t.style.display = "block";
-      setTimeout(() => t.style.display = "none", 2800);
+      setTimeout(() => t.style.display = "none", 2400);
     }
+
+    function togglePend(cb) {
+      const li = cb.closest(".pend-item");
+      if (cb.checked) li.classList.add("done");
+      else li.classList.remove("done");
+      saveState();
+    }
+
+    function addIdea(pid) {
+      const inp = document.getElementById("input-idea-" + pid);
+      const val = inp.value.trim();
+      if (!val) return;
+      const ul = document.getElementById("ideas-" + pid);
+      const li = document.createElement("li");
+      li.contentEditable = "true";
+      li.onblur = saveState;
+      li.textContent = val;
+      ul.appendChild(li);
+      inp.value = "";
+      saveState();
+    }
+
+    function addPend(pid) {
+      const inp = document.getElementById("input-pend-" + pid);
+      const val = inp.value.trim();
+      if (!val) return;
+      const ul = document.getElementById("pend-" + pid);
+      const li = document.createElement("li");
+      li.className = "pend-item";
+      li.innerHTML = `<input type="checkbox" onchange="togglePend(this)" /><span contenteditable="true" onblur="saveState()">${val}</span>`;
+      ul.appendChild(li);
+      inp.value = "";
+      saveState();
+    }
+
+    function saveState() {
+      const state = {};
+      document.querySelectorAll(".proj-card").forEach(card => {
+        const pid = card.getAttribute("data-proj");
+        state[pid] = {
+          ideas: document.getElementById("ideas-" + pid).innerHTML,
+          pend: document.getElementById("pend-" + pid).innerHTML,
+          notes: document.getElementById("notes-" + pid).value,
+          checks: Array.from(document.querySelectorAll("#pend-" + pid + " input[type='checkbox']")).map(c => c.checked)
+        };
+      });
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function loadState() {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (!raw) return;
+      try {
+        const state = JSON.parse(raw);
+        Object.keys(state).forEach(pid => {
+          const s = state[pid];
+          if (s.ideas && document.getElementById("ideas-" + pid)) {
+            document.getElementById("ideas-" + pid).innerHTML = s.ideas;
+          }
+          if (s.pend && document.getElementById("pend-" + pid)) {
+            document.getElementById("pend-" + pid).innerHTML = s.pend;
+            const cbs = document.querySelectorAll("#pend-" + pid + " input[type='checkbox']");
+            (s.checks || []).forEach((chk, idx) => {
+              if (cbs[idx]) {
+                cbs[idx].checked = chk;
+                if (chk) cbs[idx].closest(".pend-item").classList.add("done");
+              }
+            });
+          }
+          if (s.notes !== undefined && document.getElementById("notes-" + pid)) {
+            document.getElementById("notes-" + pid).value = s.notes;
+          }
+        });
+      } catch (e) {}
+    }
+
+    function resetCustomState() {
+      localStorage.removeItem(STORAGE_KEY);
+      location.reload();
+    }
+
+    window.addEventListener("DOMContentLoaded", loadState);
   </script>
 </body>
 </html>
