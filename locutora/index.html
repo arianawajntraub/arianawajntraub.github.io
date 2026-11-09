@@ -636,8 +636,8 @@
     }
 
     @media (max-width: 1024px) {
-      .hero-grid, .sec-head, .bridge-grid { grid-template-columns: 1fr; }
-      .services-grid, .tracks-grid, .video-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero-grid, .sec-head, .bridge-grid { grid-template-columns: minmax(0, 1fr); }
+      .services-grid, .tracks-grid, .video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       .anchor-nav { display: none; }
     }
     .hero-main, .hero-console, .sec-head-left, .sec-head-right, .service-card, .track-card, .video-card, .bridge-left, .bridge-right {
@@ -653,12 +653,12 @@
       .hero-title { font-size: 28px; word-break: break-word; }
       .hero-lead { font-size: 15px; }
       .console-header { flex-wrap: wrap; gap: 6px; font-size: 10px; }
-      .console-credits { grid-template-columns: 1fr; }
+      .console-credits { grid-template-columns: minmax(0, 1fr); }
       .hero-main, .hero-console, .sec-head-left, .sec-head-right, .service-card, .bridge-left, .bridge-right {
         padding: 24px 16px;
       }
       .filter-bar { padding: 14px 16px; }
-      .services-grid, .tracks-grid, .video-grid, .quick-pills { grid-template-columns: 1fr; }
+      .services-grid, .tracks-grid, .video-grid, .quick-pills { grid-template-columns: minmax(0, 1fr); }
       .hero-actions .btn { width: 100%; white-space: normal; text-align: center; }
     }
   </style>
