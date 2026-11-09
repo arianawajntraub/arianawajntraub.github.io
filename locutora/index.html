@@ -640,14 +640,26 @@
       .services-grid, .tracks-grid, .video-grid { grid-template-columns: repeat(2, 1fr); }
       .anchor-nav { display: none; }
     }
+    .hero-main, .hero-console, .sec-head-left, .sec-head-right, .service-card, .track-card, .video-card, .bridge-left, .bridge-right {
+      min-width: 0;
+    }
     @media (max-width: 680px) {
-      .container { padding: 0 16px; }
+      .container { padding: 0 14px; }
+      .nav-row { min-height: 58px; gap: 8px; }
+      .wordmark-aw-main { font-size: 16px; }
+      .wordmark-aw-main span { font-size: 18px; }
+      .wordmark-aw-sub { font-size: 6.5px; }
+      .nav-row .btn { padding: 9px 11px; font-size: 9.5px; letter-spacing: 0.04em; }
+      .hero-title { font-size: 28px; word-break: break-word; }
+      .hero-lead { font-size: 15px; }
+      .console-header { flex-wrap: wrap; gap: 6px; font-size: 10px; }
+      .console-credits { grid-template-columns: 1fr; }
       .hero-main, .hero-console, .sec-head-left, .sec-head-right, .service-card, .bridge-left, .bridge-right {
-        padding: 28px 20px;
+        padding: 24px 16px;
       }
-      .filter-bar { padding: 16px 20px; }
+      .filter-bar { padding: 14px 16px; }
       .services-grid, .tracks-grid, .video-grid, .quick-pills { grid-template-columns: 1fr; }
-      .hero-actions .btn { width: 100%; }
+      .hero-actions .btn { width: 100%; white-space: normal; text-align: center; }
     }
   </style>
 </head>
